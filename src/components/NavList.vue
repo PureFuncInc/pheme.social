@@ -3,7 +3,7 @@
     <!-- <Background /> -->
     <Header></Header>
     <div class="title">
-      <img class="logo" src="../assets/logo.svg" />
+      <img class="logo" src="../assets/logo.svg" alt=""/>
       <div class="subtitle">Voice Based SocialFi App</div>
     </div>
     <ul>

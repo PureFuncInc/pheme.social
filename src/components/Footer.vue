@@ -8,7 +8,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Footer',
+  name: 'FooterComponent',
   // setup() {
   //   const store = useStore();
   //   const showNavList = computed(() => store.state.showNavList);
@@ -21,8 +21,9 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .footer {
-  height: 30px;
-  padding-bottom: 16px;
+  box-sizing: border-box;
+  padding: 0 24px 16px;
+  height: 46px;
   position: absolute;
   bottom: 0;
   width: 100%;

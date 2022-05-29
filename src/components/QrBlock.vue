@@ -3,7 +3,7 @@
     <ul>
       <li v-for="link in qrLinkList" :key="`${link.title}-${link.qrCodeSrc}`">
         <div class="title">{{ link.title }}</div>
-        <img :src="link.qrCodeSrc" />
+        <img :src="link.qrCodeSrc" alt="" />
       </li>
     </ul>
   </div>
@@ -18,7 +18,7 @@ interface Link {
 }
 
 export default defineComponent({
-  name: 'qrBlock',
+  name: 'QrBlock',
   props: {
     linkList: {
       type: Array as PropType<Array<Link>>,

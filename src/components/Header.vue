@@ -2,11 +2,11 @@
   <div class="header">
     <ul>
       <li class="logo">
-        <img src="@/assets/icon/app.svg" />
+        <img src="@/assets/icon/app.svg" alt=""/>
       </li>
-      <li class="menu" @click="trigger">
-        <img v-if="!showNavList" src="@/assets/icon/menu.svg" />
-        <img v-if="showNavList" src="@/assets/icon/clear.svg" />
+      <li class="menu" @click="trigger" @keydown="trigger">
+        <img v-if="!showNavList" src="@/assets/icon/menu.svg" alt=""/>
+        <img v-if="showNavList" src="@/assets/icon/clear.svg" alt=""/>
       </li>
     </ul>
   </div>
@@ -17,7 +17,7 @@ import { defineComponent, computed } from 'vue';
 import { useStore } from '@/store';
 
 export default defineComponent({
-  name: 'Header',
+  name: 'HeaderComponent',
   setup() {
     const store = useStore();
     const showNavList = computed(() => store.state.showNavList);

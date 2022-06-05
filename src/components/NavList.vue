@@ -1,14 +1,20 @@
 <template>
   <div class="navList">
-    <!-- <Background /> -->
     <Header></Header>
     <div class="title">
-      <img class="logo" src="../assets/logo.svg" alt=""/>
+      <img class="logo" src="../assets/logo.svg" alt="" />
       <div class="subtitle">Voice Based SocialFi App</div>
     </div>
     <ul>
-      <li v-for="link in linkList" :key="`${link.title}-${link.url}`">
-        <a :href="link.url" target="_blank" rel="noopener">{{ link.title }}</a>
+      <li
+        v-for="link in linkList"
+        :key="`${link.title}-${link.url}`"
+        @click="redirectTo(link.url)"
+        @keydown.enter="redirectTo(link.url)"
+      >
+        {{ link.title }}
+        <!-- <router-link :to="link.url">{{ link.title }}</router-link> -->
+        <!-- <a :href="link.url" target="_blank" rel="noopener">{{ link.title }}</a> -->
       </li>
     </ul>
     <Footer></Footer>
@@ -16,14 +22,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { defineComponent, ref } from 'vue';
+import { useRouter } from 'vue-router';
+import { useStore } from '@/store';
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
-
-interface Link {
-  title: string;
-  url: string;
-}
 
 export default defineComponent({
   name: 'NavList',
@@ -31,16 +34,23 @@ export default defineComponent({
     Header,
     Footer,
   },
-  props: {
-    linkList: {
-      type: Array as PropType<Array<Link>>,
-      default: () => [
-        {
-          title: '',
-          url: '',
-        },
-      ],
-    },
+  setup() {
+    const store = useStore();
+    const router = useRouter();
+    const linkList = ref([
+      { title: 'How to Play', url: '/HowToPlay' },
+      { title: 'Lite Paper', url: '/LitePaper' },
+      { title: 'White Paper', url: '/WhitePaper' },
+    ]);
+    function redirectTo(url: string) {
+      store.commit('triggerNavList');
+      router.push({
+        path: url,
+      });
+    }
+    return {
+      linkList, redirectTo,
+    };
   },
 });
 </script>
@@ -50,7 +60,7 @@ export default defineComponent({
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('../assets/bg.png') no-repeat center;
+  background: url("../assets/bg.png") no-repeat center;
   background-size: cover;
   background-color: #fff;
   top: 0;
@@ -81,13 +91,7 @@ export default defineComponent({
       padding: 4px 8px;
       border: 1px solid #262626;
       border-radius: 8px;
-      a {
-        text-decoration: none;
-        font-weight: 500;
-        &:visited {
-          color: #262626;
-        }
-      }
+      cursor: pointer;
     }
   }
 }

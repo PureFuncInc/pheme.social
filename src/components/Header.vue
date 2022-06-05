@@ -2,7 +2,9 @@
   <div class="header">
     <ul>
       <li class="logo">
-        <img src="@/assets/icon/app.svg" alt=""/>
+        <router-link to="/">
+          <img src="@/assets/icon/app.svg" alt=""/>
+        </router-link>
       </li>
       <li class="menu" @click="trigger" @keydown="trigger">
         <img v-if="!showNavList" src="@/assets/icon/menu.svg" alt=""/>

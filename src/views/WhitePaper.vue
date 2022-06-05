@@ -1,11 +1,6 @@
 <template>
-  <div class="home">
+  <div class="whitePaper">
     <Header></Header>
-    <div class="title">
-      <img class="logo" src="../assets/logo.svg" alt=""/>
-      <div class="subtitle">Voice Based SocialFi App</div>
-    </div>
-    <QrBlock :link-list="qrLink" />
     <Footer></Footer>
     <transition name="fade" mode="out-in">
       <div v-show="showNavList">
@@ -19,39 +14,28 @@
 import { defineComponent, computed } from 'vue';
 import { useStore } from '@/store';
 import Header from '@/components/Header.vue';
-import QrBlock from '@/components/QrBlock.vue';
 import NavList from '@/components/NavList.vue';
 import Footer from '@/components/Footer.vue';
 
-import formsQrCodeSrc from '@/assets/qr/forms.png';
-import discordQrCodeSrc from '@/assets/qr/discord.png';
-
 export default defineComponent({
-  name: 'HomePage',
+  name: 'WhitePaperPage',
   components: {
     Header,
-    QrBlock,
     NavList,
     Footer,
   },
   setup() {
     const store = useStore();
-    const qrLink = [
-      { title: 'iOS', qrCodeSrc: formsQrCodeSrc },
-      { title: 'Android', qrCodeSrc: formsQrCodeSrc },
-      { title: 'Discord', qrCodeSrc: discordQrCodeSrc },
-    ];
     const showNavList = computed(() => store.state.showNavList);
     return {
       showNavList,
-      qrLink,
     };
   },
 });
 </script>
 
 <style lang="scss" scoped>
-.home {
+.whitePaper {
   position: relative;
   width: 100%;
   height: 100%;

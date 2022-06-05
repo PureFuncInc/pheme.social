@@ -9,13 +9,6 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'FooterComponent',
-  // setup() {
-  //   const store = useStore();
-  //   const showNavList = computed(() => store.state.showNavList);
-  //   return {
-  //     showNavList,
-  //   };
-  // },
 });
 </script>
 

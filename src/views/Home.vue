@@ -23,7 +23,8 @@ import QrBlock from '@/components/QrBlock.vue';
 import NavList from '@/components/NavList.vue';
 import Footer from '@/components/Footer.vue';
 
-import formsQrCodeSrc from '@/assets/qr/forms.png';
+import iosQrCodeSrc from '@/assets/qr/ios.png';
+import androidQrCodeSrc from '@/assets/qr/android.png';
 import discordQrCodeSrc from '@/assets/qr/discord.png';
 
 export default defineComponent({
@@ -37,8 +38,8 @@ export default defineComponent({
   setup() {
     const store = useStore();
     const qrLink = [
-      { title: 'iOS', qrCodeSrc: formsQrCodeSrc },
-      { title: 'Android', qrCodeSrc: formsQrCodeSrc },
+      { title: 'iOS', qrCodeSrc: iosQrCodeSrc },
+      { title: 'Android', qrCodeSrc: androidQrCodeSrc },
       { title: 'Discord', qrCodeSrc: discordQrCodeSrc },
     ];
     const showNavList = computed(() => store.state.showNavList);

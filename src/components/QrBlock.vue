@@ -1,8 +1,9 @@
 <template>
   <div class="qrBlock">
     <ul>
-      <li v-for="link in qrLinkList" :key="`${link.title}-${link.qrCodeSrc}`">
+      <li v-for="(link, index) in qrLinkList.data" :key="`${link.title}-${link.qrCodeSrc}`">
         <div class="title">{{ link.title }}</div>
+        <div :ref="`qrCanvas${index}`"></div>
         <img :src="link.qrCodeSrc" alt="" />
       </li>
     </ul>
@@ -10,11 +11,68 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, computed } from 'vue';
+import {
+  defineComponent, PropType, reactive, onMounted,
+} from 'vue';
+import QRCodeStyling, {
+  DrawType,
+  TypeNumber,
+  Mode,
+  ErrorCorrectionLevel,
+  DotType,
+  CornerSquareType,
+  CornerDotType,
+} from 'qr-code-styling';
 
 interface Link {
   title: string;
-  qrCodeSrc: string;
+  linkUrl: string;
+}
+
+class QrCodeOption {
+  private data: string;
+
+  private image: string;
+
+  constructor(data: string, image = '') {
+    this.data = data;
+    this.image = image;
+  }
+
+  serialize() {
+    return {
+      width: 256,
+      height: 256,
+      type: 'svg' as DrawType,
+      data: this.data,
+      image: this.image,
+      margin: 10,
+      qrOptions: {
+        typeNumber: 0 as TypeNumber,
+        mode: 'Byte' as Mode,
+        errorCorrectionLevel: 'M' as ErrorCorrectionLevel,
+      },
+      imageOptions: {
+        hideBackgroundDots: true,
+        crossOrigin: 'anonymous',
+      },
+      dotsOptions: {
+        color: '#35495E',
+        type: 'dots' as DotType,
+      },
+      backgroundOptions: {
+        color: '#ffffff',
+      },
+      cornersSquareOptions: {
+        color: '#35495E',
+        type: 'extra-rounded' as CornerSquareType,
+      },
+      cornersDotOptions: {
+        color: '#35495E',
+        type: 'dot' as CornerDotType,
+      },
+    };
+  }
 }
 
 export default defineComponent({
@@ -25,18 +83,44 @@ export default defineComponent({
       default: () => [
         {
           title: '',
-          qrCodeSrc: '',
+          linkUrl: '',
         },
       ],
     },
   },
   setup(props) {
-    const qrLinkList = computed(() => {
+    const qrLinkList: {
+      data: {
+        qrCodeSrc?: string;
+        title?: string;
+        linkUrl?: string;
+      }[];
+    } = reactive({ data: [] });
+
+    function blobToDataURL(blob: Blob | null) {
+      const fr = new FileReader();
+      fr.readAsDataURL(blob as Blob);
+      return new Promise((resolve) => {
+        fr.onload = (e) => resolve(e.target?.result as string);
+      });
+    }
+
+    onMounted(async () => {
       const { linkList } = props;
-      return linkList;
+      qrLinkList.data = await Promise.all(
+        linkList.map(async (el) => ({
+          ...el,
+          qrCodeSrc: await blobToDataURL(
+            await new QRCodeStyling(new QrCodeOption(el.linkUrl).serialize()).getRawData(
+              'svg',
+            ),
+          ) as string,
+        })),
+      );
     });
     return {
       qrLinkList,
+      onMounted,
     };
   },
 });
@@ -68,6 +152,7 @@ export default defineComponent({
         font-size: 22px;
       }
       img {
+        border-radius: 12px;
         margin-top: 16px;
         width: 128px;
         height: 128px;

@@ -23,10 +23,6 @@ import QrBlock from '@/components/QrBlock.vue';
 import NavList from '@/components/NavList.vue';
 import Footer from '@/components/Footer.vue';
 
-import iosQrCodeSrc from '@/assets/qr/ios.png';
-import androidQrCodeSrc from '@/assets/qr/android.png';
-import discordQrCodeSrc from '@/assets/qr/discord.png';
-
 export default defineComponent({
   name: 'HomePage',
   components: {
@@ -38,9 +34,9 @@ export default defineComponent({
   setup() {
     const store = useStore();
     const qrLink = [
-      { title: 'iOS', qrCodeSrc: iosQrCodeSrc },
-      { title: 'Android', qrCodeSrc: androidQrCodeSrc },
-      { title: 'Discord', qrCodeSrc: discordQrCodeSrc },
+      { title: 'iOS', linkUrl: 'https://testflight.apple.com/join/kY8nJacg' },
+      { title: 'Android', linkUrl: 'https://play.google.com/apps/testing/net.purefunc.voice' },
+      { title: 'Discord', linkUrl: 'https://discord.gg/ZUQy68HtHC' },
     ];
     const showNavList = computed(() => store.state.showNavList);
     return {

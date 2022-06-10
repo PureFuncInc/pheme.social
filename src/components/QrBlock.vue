@@ -4,7 +4,9 @@
       <li v-for="(link, index) in qrLinkList.data" :key="`${link.title}-${link.qrCodeSrc}`">
         <div class="title">{{ link.title }}</div>
         <div :ref="`qrCanvas${index}`"></div>
-        <img :src="link.qrCodeSrc" alt="" />
+        <a :href="link.linkUrl" target="_blank" rel="noopener">
+          <img :src="link.qrCodeSrc" :alt="link.linkUrl" />
+        </a>
       </li>
     </ul>
   </div>
@@ -151,12 +153,14 @@ export default defineComponent({
         border-radius: 8px;
         font-size: 22px;
       }
-      img {
-        border-radius: 12px;
-        margin-top: 16px;
-        width: 128px;
-        height: 128px;
-        object-fit: contain;
+      a {
+        img {
+          border-radius: 12px;
+          margin-top: 16px;
+          width: 128px;
+          height: 128px;
+          object-fit: contain;
+        }
       }
     }
   }

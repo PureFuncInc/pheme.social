@@ -36,7 +36,7 @@ class QrCodeOption {
 
   private image: string;
 
-  constructor(data: string, image = '') {
+  constructor(data: string, image = 'https://pheme.social/static/app.png') {
     this.data = data;
     this.image = image;
   }

@@ -36,7 +36,7 @@ class QrCodeOption {
 
   private image: string;
 
-  constructor(data: string, image = 'https://pheme.social/static/app.png') {
+  constructor(data: string, image: string) {
     this.data = data;
     this.image = image;
   }
@@ -57,6 +57,7 @@ class QrCodeOption {
       imageOptions: {
         hideBackgroundDots: true,
         crossOrigin: 'anonymous',
+        margin: 3,
       },
       dotsOptions: {
         color: '#35495E',
@@ -109,11 +110,12 @@ export default defineComponent({
 
     onMounted(async () => {
       const { linkList } = props;
+      const img = (await import('@/assets/app.png')).default;
       qrLinkList.data = await Promise.all(
         linkList.map(async (el) => ({
           ...el,
           qrCodeSrc: (await blobToDataURL(
-            await new QRCodeStyling(new QrCodeOption(el.linkUrl).serialize()).getRawData('svg'),
+            await new QRCodeStyling(new QrCodeOption(el.linkUrl, img).serialize()).getRawData('svg'),
           )) as string,
         })),
       );

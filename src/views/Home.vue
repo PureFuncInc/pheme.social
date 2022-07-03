@@ -10,11 +10,6 @@
       <DownloadBlock></DownloadBlock>
       <Footer></Footer>
     </div>
-    <transition name="fade" mode="out-in">
-      <div v-show="showNavList">
-        <NavList />
-      </div>
-    </transition>
   </div>
 </template>
 
@@ -28,7 +23,6 @@ import TimelineBlock from '@/components/Home/TimelineBlock.vue';
 import TeamBlock from '@/components/Home/TeamBlock.vue';
 import ContactUsBlock from '@/components/Home/ContactUsBlock.vue';
 import DownloadBlock from '@/components/Home/DownloadBlock.vue';
-import NavList from '@/components/NavList.vue';
 import Footer from '@/components/Footer.vue';
 
 export default defineComponent({
@@ -41,7 +35,6 @@ export default defineComponent({
     TeamBlock,
     ContactUsBlock,
     DownloadBlock,
-    NavList,
     Footer,
   },
   setup() {

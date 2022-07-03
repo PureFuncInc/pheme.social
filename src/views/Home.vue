@@ -2,7 +2,11 @@
   <div class="home">
     <Header></Header>
     <div class="container">
-      <Banner></Banner>
+      <BannerBlock></BannerBlock>
+      <IntroBlock></IntroBlock>
+      <TimelineBlock></TimelineBlock>
+      <TeamBlock></TeamBlock>
+      <ContactUsBlock></ContactUsBlock>
       <DownloadBlock></DownloadBlock>
       <Footer></Footer>
     </div>
@@ -18,7 +22,11 @@
 import { defineComponent, computed } from 'vue';
 import { useStore } from '@/store';
 import Header from '@/components/Header.vue';
-import Banner from '@/components/Home/Banner.vue';
+import BannerBlock from '@/components/Home/BannerBlock.vue';
+import IntroBlock from '@/components/Home/IntroBlock.vue';
+import TimelineBlock from '@/components/Home/TimelineBlock.vue';
+import TeamBlock from '@/components/Home/TeamBlock.vue';
+import ContactUsBlock from '@/components/Home/ContactUsBlock.vue';
 import DownloadBlock from '@/components/Home/DownloadBlock.vue';
 import NavList from '@/components/NavList.vue';
 import Footer from '@/components/Footer.vue';
@@ -27,7 +35,11 @@ export default defineComponent({
   name: 'HomePage',
   components: {
     Header,
-    Banner,
+    BannerBlock,
+    IntroBlock,
+    TimelineBlock,
+    TeamBlock,
+    ContactUsBlock,
     DownloadBlock,
     NavList,
     Footer,

@@ -14,4 +14,13 @@ module.exports = defineConfig({
       .loader(path.resolve(__dirname, 'src/utils/mdLoader.js'))
       .end();
   },
+  css: {
+    loaderOptions: {
+      scss: {
+        additionalData: `
+          @import "@/assets/style.scss";
+        `,
+      },
+    },
+  },
 });

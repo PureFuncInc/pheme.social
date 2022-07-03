@@ -1,0 +1,12 @@
+@import '@/assets/fonts/fonts.scss';
+@import '@/assets/media-query.scss';
+
+$primary: #0382F5;
+$white: rgba(255, 255, 255, .96);
+$dark: #2E3A59;
+
+button {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+}

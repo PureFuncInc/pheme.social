@@ -3,12 +3,11 @@
     <ul>
       <li class="logo">
         <router-link to="/">
-          <img src="@/assets/icon/app.svg" alt=""/>
+          <img src="@/assets/logo-text.svg" alt="" />
         </router-link>
       </li>
-      <li class="menu" @click="trigger" @keydown="trigger">
-        <img v-if="!showNavList" src="@/assets/icon/menu.svg" alt=""/>
-        <img v-if="showNavList" src="@/assets/icon/clear.svg" alt=""/>
+      <li class="downloadApp">
+        <button @click="downloadApp()" @keydown="downloadApp()">下載 App</button>
       </li>
     </ul>
   </div>
@@ -17,18 +16,23 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
 import { useStore } from '@/store';
+import getDevice from '@/utils/getDevice';
 
 export default defineComponent({
   name: 'HeaderComponent',
   setup() {
     const store = useStore();
     const showNavList = computed(() => store.state.showNavList);
-    function trigger() {
-      store.commit('triggerNavList');
+    function downloadApp() {
+      const device = getDevice();
+      const url = device === 'ios'
+        ? process.env.VUE_APP_IOS_APP_URL
+        : process.env.VUE_APP_ANDROID_APP_URL;
+      window.open(url, '', 'noopener=yes,noreferrer=yes');
     }
     return {
       showNavList,
-      trigger,
+      downloadApp,
     };
   },
 });
@@ -38,46 +42,63 @@ export default defineComponent({
 .header {
   position: absolute;
   z-index: 2;
-  top: 78px;
+  top: 0;
   width: 100%;
+  height: 92px;
+  background: $white;
   ul {
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0 64px;
     width: 100%;
+    max-width: 1280px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    list-style-type: none;
     box-sizing: border-box;
-    padding: 0 64px;
-    margin: 0;
     li {
       &.logo {
-        width: 90px;
-        height: 90px;
+        width: 204px;
+        height: 52px;
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
-      &.menu {
-        cursor: pointer;
-        width: 48px;
-        height: 48px;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+      &.downloadApp {
+        button {
+          color: $dark;
+          font-size: 16px;
+          position: relative;
+          padding: 4px 20px;
+          background-color: transparent;
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: currentColor;
+            opacity: 0;
+            transition: all .3s;
+            border-radius: 20px;
+          }
+          &:hover::before {
+            opacity: .12;
+          }
         }
       }
     }
   }
 }
 
-@media all and (max-width: 576px) {
+@include media(sm) {
   .header {
-    top: 32px;
     ul {
-      padding: 0 32px;
+      padding: 0 24px;
     }
   }
 }

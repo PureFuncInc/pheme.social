@@ -6,7 +6,7 @@
         <div class="description">
           聆聽來自各地的聲音，透過聲音的傳輸，讓你擁有身歷其境的感受
         </div>
-        <button class="downloadApp">立即下載APP</button>
+        <button class="downloadApp" @click="downloadApp()" @keydown="downloadApp()">立即下載APP</button>
       </div>
       <div class="pic" />
     </div>
@@ -14,27 +14,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue';
-// import { useStore } from '@/store';
-// import getDevice from '@/utils/getDevice';
+import { defineComponent } from 'vue';
+import toDownloadApp from '@/utils/toDownloadApp';
 
 export default defineComponent({
-  name: 'HeaderComponent',
+  name: 'BannerComponent',
   setup() {
-    return {};
-    // const store = useStore();
-    // const showNavList = computed(() => store.state.showNavList);
-    // function downloadApp() {
-    //   const device = getDevice();
-    //   const url = device === 'ios'
-    //     ? process.env.VUE_APP_IOS_APP_URL
-    //     : process.env.VUE_APP_ANDROID_APP_URL;
-    //   window.open(url, '', 'noopener=yes,noreferrer=yes');
-    // }
-    // return {
-    //   showNavList,
-    //   downloadApp,
-    // };
+    const downloadApp = () => toDownloadApp();
+    return {
+      downloadApp,
+    };
   },
 });
 </script>
@@ -65,6 +54,7 @@ export default defineComponent({
       .description {
         margin-top: 32px;
         font-size: 24px;
+        font-weight: 500;
       }
       .downloadApp {
         margin-top: 50px;
@@ -79,7 +69,6 @@ export default defineComponent({
     }
     .pic {
       width: 677px;
-      // min-width: 500px;
       height: 100%;
       background: url("@/assets/home/phone_pc.png") no-repeat center;
       background-size: contain;
@@ -90,17 +79,27 @@ export default defineComponent({
 @include media(sm) {
   .banner {
     height: auto;
-    padding: 92px 24px 50px;
+    padding: 92px 0 50px;
     .container {
       flex-direction: column;
       .content {
+        padding: 0 24px;
         order: 2;
         width: auto;
         text-align: center;
+        .title {
+          font-size: 24px;
+        }
+        .description {
+          margin-top: 16px;
+          font-size: 18px;
+        }
       }
       .pic {
         order: 1;
+        width: 100%;
         height: 550px;
+        background-size: auto 550px;
       }
     }
   }

@@ -16,20 +16,14 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
 import { useStore } from '@/store';
-import getDevice from '@/utils/getDevice';
+import toDownloadApp from '@/utils/toDownloadApp';
 
 export default defineComponent({
   name: 'HeaderComponent',
   setup() {
     const store = useStore();
     const showNavList = computed(() => store.state.showNavList);
-    function downloadApp() {
-      const device = getDevice();
-      const url = device === 'ios'
-        ? process.env.VUE_APP_IOS_APP_URL
-        : process.env.VUE_APP_ANDROID_APP_URL;
-      window.open(url, '', 'noopener=yes,noreferrer=yes');
-    }
+    const downloadApp = () => toDownloadApp();
     return {
       showNavList,
       downloadApp,

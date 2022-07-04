@@ -36,7 +36,7 @@ class QrCodeOption {
 
   private image: string;
 
-  constructor(data: string, image = 'https://pheme.social/static/app.png') {
+  constructor(data: string, image: string) {
     this.data = data;
     this.image = image;
   }
@@ -57,6 +57,7 @@ class QrCodeOption {
       imageOptions: {
         hideBackgroundDots: true,
         crossOrigin: 'anonymous',
+        margin: 3,
       },
       dotsOptions: {
         color: '#35495E',
@@ -109,14 +110,13 @@ export default defineComponent({
 
     onMounted(async () => {
       const { linkList } = props;
+      const img = (await import('@/assets/app.png')).default;
       qrLinkList.data = await Promise.all(
         linkList.map(async (el) => ({
           ...el,
-          qrCodeSrc: await blobToDataURL(
-            await new QRCodeStyling(new QrCodeOption(el.linkUrl).serialize()).getRawData(
-              'svg',
-            ),
-          ) as string,
+          qrCodeSrc: (await blobToDataURL(
+            await new QRCodeStyling(new QrCodeOption(el.linkUrl, img).serialize()).getRawData('svg'),
+          )) as string,
         })),
       );
     });
@@ -130,9 +130,8 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .qrBlock {
-  margin-top: 88px;
   width: 100%;
-  padding-bottom: 88px;
+  padding: 88px 0;
   ul {
     max-width: 896px;
     list-style-type: none;
@@ -148,8 +147,9 @@ export default defineComponent({
       align-items: center;
       .title {
         width: fit-content;
-        padding: 4px 8px;
-        border: 1px solid #262626;
+        padding: 2px 16px;
+        border: 1px solid #fff;
+        color: #fff;
         border-radius: 8px;
         font-size: 22px;
       }
@@ -165,14 +165,26 @@ export default defineComponent({
     }
   }
 }
-@media all and (max-width: 576px) {
+@include media(sm) {
   .qrBlock {
-    margin-top: 44px;
+    padding: 44px 0;
     ul {
       display: block;
       li {
         margin: 0 auto;
-        padding-bottom: 12px;
+        padding-bottom: 24px;
+        .title {
+          padding: 2px 12px;
+        }
+        a {
+          img {
+            border-radius: 12px;
+            margin-top: 12px;
+            width: 128px;
+            height: 128px;
+            object-fit: contain;
+          }
+        }
       }
     }
   }

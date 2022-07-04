@@ -14,14 +14,23 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 64px;
   box-sizing: border-box;
-  padding: 0 24px 16px;
-  height: 46px;
-  position: absolute;
-  bottom: 0;
+  height: 120px;
+  background: #192038;
   width: 100%;
   color: #fff;
-  font-weight: normal;
+  font-weight: 300;
+  font-weight: 300;
   font-size: 14px;
+}
+
+@include media('sm') {
+  .footer {
+    padding: 0 24px;
+  }
 }
 </style>

@@ -35,7 +35,7 @@ export default defineComponent({
 .banner {
   height: 1024px;
   background:
-    url("@/assets/home/banner/background-pc-wave.png") no-repeat center,
+    url("@/assets/home/bannerBlock/background-pc-wave.png") no-repeat center,
     linear-gradient(316.04deg, #0086FF 35.9%, #07BAFE 106.37%);
   background-size: cover;
   padding: 0 64px;

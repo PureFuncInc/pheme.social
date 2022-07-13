@@ -1,6 +1,6 @@
 <template>
   <div class="playWaveCard">
-    <img src="@/assets/home/intro/playWave-w.png" alt="" />
+    <img src="@/assets/home/introBlock/playWave-w.png" alt="" />
   </div>
 </template>
 

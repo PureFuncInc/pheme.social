@@ -4,10 +4,10 @@
     <div class="container">
       <BannerBlock></BannerBlock>
       <IntroBlock></IntroBlock>
+      <DownloadBlock></DownloadBlock>
       <TimelineBlock></TimelineBlock>
       <TeamBlock></TeamBlock>
       <ContactUsBlock></ContactUsBlock>
-      <DownloadBlock></DownloadBlock>
       <Footer></Footer>
     </div>
   </div>
@@ -31,10 +31,10 @@ export default defineComponent({
     Header,
     BannerBlock,
     IntroBlock,
+    DownloadBlock,
     TimelineBlock,
     TeamBlock,
     ContactUsBlock,
-    DownloadBlock,
     Footer,
   },
   setup() {

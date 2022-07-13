@@ -2,13 +2,16 @@
   <div class="banner">
     <div class="container">
       <div class="content">
-        <div class="title">透過聲音交流</div>
+        <div class="title">聆聽彼此的聲音<br>分享屬於我們的故事</div>
         <div class="description">
-          聆聽來自各地的聲音，透過聲音的傳輸，讓你擁有身歷其境的感受
+          透過聲音的交流，來了解彼此想法。使用感官來聆聽聲音的美學，聽見彼此內心的聲音。
         </div>
         <button class="downloadApp" @click="downloadApp()" @keydown="downloadApp()">立即下載APP</button>
       </div>
-      <div class="pic" />
+      <picture class="phone">
+        <source />
+        <img src="@/assets/home/phone_pc.png" alt="" loading="lazy"/>
+      </picture>
     </div>
   </div>
 </template>
@@ -31,10 +34,10 @@ export default defineComponent({
 <style scoped lang="scss">
 .banner {
   height: 1024px;
-  background-image: url("@/assets/home/banner/background-pc-wave.png"),
-    url("@/assets/home/banner/background-pc.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
+  background:
+    url("@/assets/home/banner/background-pc-wave.png") no-repeat center,
+    linear-gradient(316.04deg, #0086FF 35.9%, #07BAFE 106.37%);
+  background-size: cover;
   padding: 0 64px;
   box-sizing: border-box;
   .container {
@@ -67,11 +70,15 @@ export default defineComponent({
         color: $primary;
       }
     }
-    .pic {
+    .phone {
       width: 677px;
       height: 100%;
-      background: url("@/assets/home/phone_pc.png") no-repeat center;
-      background-size: contain;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
 }
@@ -95,11 +102,10 @@ export default defineComponent({
           font-size: 18px;
         }
       }
-      .pic {
+      .phone {
         order: 1;
         width: 100%;
         height: 550px;
-        background-size: auto 550px;
       }
     }
   }

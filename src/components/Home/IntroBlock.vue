@@ -3,38 +3,38 @@
     <div class="title">透過聲音交流</div>
     <div class="subtitle">聆聽來自各地的聲音，透過聲音的傳輸，讓你擁有身歷其境的感受</div>
     <div class="play-button">
-      <img src="@/assets/home/intro/playButton.png" alt="" />
+      <img src="@/assets/home/introBlock/playButton.png" alt="" />
     </div>
-    <PlayCard
+    <play-card
       class="play-card play-card-01"
-      :user-avatar="require('@/assets/home/intro/avatar01.png')"
+      :user-avatar="require('@/assets/home/introBlock/avatar01.png')"
       user-name="Maxbergmann"
       post-time="3 分鐘前"
       text="Good Morning"
     />
-    <PlayCard
+    <play-card
       class="play-card play-card-02"
-      :user-avatar="require('@/assets/home/intro/avatar02.png')"
+      :user-avatar="require('@/assets/home/introBlock/avatar02.png')"
       user-name="Sully. zu"
       post-time="1 小時前"
       text="Holiday"
     />
-    <PlayCard
+    <play-card
       class="play-card play-card-03"
-      :user-avatar="require('@/assets/home/intro/avatar03.png')"
+      :user-avatar="require('@/assets/home/introBlock/avatar03.png')"
       user-name="LuuuLu"
       post-time="3 分鐘前"
       text="Nice Nice"
     />
-    <PlayWaveCard class="play-wave-card play-wave-card-01" />
-    <PlayWaveCard class="play-wave-card play-wave-card-02" />
+    <play-wave-card class="play-wave-card play-wave-card-01" />
+    <play-wave-card class="play-wave-card play-wave-card-02" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import PlayCard from '@/components/share/PlayCard.vue';
-import PlayWaveCard from '@/components/share/PlayWaveCard.vue';
+import PlayCard from '@/components/Home/IntroBlock/PlayCard.vue';
+import PlayWaveCard from '@/components/Home/IntroBlock/PlayWaveCard.vue';
 
 export default defineComponent({
   name: 'IntroBlockComponent',
@@ -51,7 +51,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .introBlock {
   overflow-x: hidden;
-  background: url("@/assets/home/intro/background-pc-wave.png") no-repeat center;
+  background: url("@/assets/home/introBlock/background-pc-wave.png") no-repeat center;
   background-size: cover;
   position: relative;
   height: 900px;
@@ -111,7 +111,7 @@ export default defineComponent({
 
 @include media(sm) {
   .introBlock {
-    background: url("@/assets/home/intro/background-mobile-wave.png") no-repeat center;
+    background: url("@/assets/home/introBlock/background-mobile-wave.png") no-repeat center;
     height: 812px;
     padding-top: 47px;
     .title {

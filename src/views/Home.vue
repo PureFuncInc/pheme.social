@@ -1,14 +1,14 @@
 <template>
   <div class="home">
-    <Header></Header>
+    <header-component />
     <div class="container">
-      <BannerBlock></BannerBlock>
-      <IntroBlock></IntroBlock>
-      <DownloadBlock></DownloadBlock>
-      <TimelineBlock></TimelineBlock>
-      <TeamBlock></TeamBlock>
-      <ContactUsBlock></ContactUsBlock>
-      <Footer></Footer>
+      <banner-block />
+      <intro-block />
+      <download-block />
+      <timeline-block />
+      <team-block />
+      <contact-us-block />
+      <footer-component />
     </div>
   </div>
 </template>
@@ -16,26 +16,26 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
 import { useStore } from '@/store';
-import Header from '@/components/Header.vue';
+import HeaderComponent from '@/components/Header.vue';
 import BannerBlock from '@/components/Home/BannerBlock.vue';
 import IntroBlock from '@/components/Home/IntroBlock.vue';
 import TimelineBlock from '@/components/Home/TimelineBlock.vue';
 import TeamBlock from '@/components/Home/TeamBlock.vue';
 import ContactUsBlock from '@/components/Home/ContactUsBlock.vue';
 import DownloadBlock from '@/components/Home/DownloadBlock.vue';
-import Footer from '@/components/Footer.vue';
+import FooterComponent from '@/components/Footer.vue';
 
 export default defineComponent({
   name: 'HomePage',
   components: {
-    Header,
+    HeaderComponent,
     BannerBlock,
     IntroBlock,
     DownloadBlock,
     TimelineBlock,
     TeamBlock,
     ContactUsBlock,
-    Footer,
+    FooterComponent,
   },
   setup() {
     const store = useStore();
@@ -53,6 +53,9 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   min-height: 100vh;
+  .container {
+    background: #F6F8FB;
+  }
 }
 .fade-enter-active,
 .fade-leave-active {

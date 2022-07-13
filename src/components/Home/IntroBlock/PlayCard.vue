@@ -12,8 +12,8 @@
     <div class="text">{{ text }}</div>
     <div class="playWave">
       <picture>
-        <source srcset="@/assets/home/intro/playWave-mobile.png" media="(max-width: 768px)"/>
-        <img src="@/assets/home/intro/playWave.png" alt="" loading="lazy"/>
+        <source srcset="@/assets/home/introBlock/playWave-mobile.png" media="(max-width: 768px)"/>
+        <img src="@/assets/home/introBlock/playWave.png" alt="" loading="lazy"/>
       </picture>
     </div>
   </div>

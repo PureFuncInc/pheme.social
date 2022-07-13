@@ -9,7 +9,11 @@ export default () => {
     return 'android';
   }
 
-  if (userAgent.match(/iPhone/i) || userAgent.match(/iPad/i) || userAgent.match(/iPod/i)
+  if (
+    userAgent.match(/iPhone/i)
+    || userAgent.match(/iPad/i)
+    || userAgent.match(/iPod/i)
+    || userAgent.match(/Mac/i)
   ) {
     return 'ios';
   }

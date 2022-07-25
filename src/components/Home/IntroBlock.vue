@@ -51,7 +51,13 @@ export default defineComponent({
 <style scoped lang="scss">
 .introBlock {
   overflow-x: hidden;
-  background: url("@/assets/home/introBlock/background-pc-wave.png") no-repeat center;
+  background: linear-gradient(
+      to bottom,
+      rgba(246, 248, 251, 0) 0%,
+      rgba(246, 248, 251, 0) 80%,
+      rgba(246, 248, 251, 1) 100%
+    ),
+    url("@/assets/home/introBlock/background-pc-wave.png") no-repeat center;
   background-size: cover;
   position: relative;
   height: 900px;
@@ -111,7 +117,14 @@ export default defineComponent({
 
 @include media(sm) {
   .introBlock {
-    background: url("@/assets/home/introBlock/background-mobile-wave.png") no-repeat center;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(246, 248, 251, 0) 0%,
+        rgba(246, 248, 251, 0) 80%,
+        rgba(246, 248, 251, 1) 100%
+      ),
+      url("@/assets/home/introBlock/background-mobile-wave.png") no-repeat center;
     height: 812px;
     padding-top: 47px;
     .title {

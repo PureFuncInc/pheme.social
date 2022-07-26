@@ -18,6 +18,8 @@ jobs:
           cache: 'npm'
       - name: npm install
         run: npm install
+      - name: clean
+        run: rm -rf dist
       - name: npm run build:prod
         run: npm run build:prod
       - name: deploy

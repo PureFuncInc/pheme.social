@@ -20,11 +20,5 @@ npm run build:prod
 npm run lint
 ```
 
-### Deploy
-```
-zip -r dist.zip dist
-scp dist.zip office:~
-```
-
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

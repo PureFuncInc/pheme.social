@@ -1,8 +1,9 @@
-name: Release
+name: PR
 
 on:
-  release:
-    types: [ created ]
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -18,11 +19,5 @@ jobs:
           cache: 'npm'
       - name: npm install
         run: npm install
-      - name: clean
-        run: rm -rf dist
-      - name: npm run build:prod
-        run: npm run build:prod
-      - name: deploy
-        run: sh deploy.sh
-        env:
-          GITHUB_REF_NAME: ${{ github.GITHUB_REF_NAME }}
+      - name: npm run lint
+        run: npm run lint

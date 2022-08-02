@@ -24,8 +24,8 @@
 </details>
 
 # The Token
-* ETH
-* Pheme Token
+### ETH
+### Pheme Token
 
 # Gaming
 <details>
@@ -69,9 +69,11 @@
   
   <details>
     <summary>等級</summary>
-    <blockquote>
-      灰 白 藍 黃 綠
-    </blockquote>
+    <li>灰 LV1 ~ LV20</li>
+    <li>白 LV21 ~ LV40</li>
+    <li>藍 LV41 ~ LV60</li>
+    <li>黃 LV61 ~ LV80</li>
+    <li>綠 LV81 ~ LV100</li>
   </details>
 </details>
 
@@ -101,9 +103,8 @@
   
   <details>
     <summary>替身使用的道具</summary>
-    <blockquote>
-      
-    </blockquote>
+    <li>飼料</li>
+    <li>裝飾</li>
   </details>
 </details>
 

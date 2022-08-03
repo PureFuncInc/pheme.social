@@ -50,9 +50,30 @@
   <summary><h3>屬性</h3></summary>
 
   <details>
+    <summary>性別</summary>
+    <ul>
+      <li>#</li>
+    </ul>
+  </details>
+  
+  <details>
+    <summary>高度</summary>
+    <ul>
+      <li>#</li>
+    </ul>
+  </details>
+  
+  <details>
+    <summary>體重</summary>
+    <ul>
+      <li>#</li>
+    </ul>
+  </details>
+  
+  <details>
     <summary>體力</summary>
     <ul>
-      <li>影響</li>
+      <li>#</li>
     </ul>
   </details>
 

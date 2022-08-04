@@ -1,6 +1,7 @@
 # What is Pheme
 
-* Pheme 是一個以聲音為標的的 Web 3.0 社群媒體
+* Pheme 是一個以聲音為媒介的 Web 3.0 社群媒體
+* 以智能留聲機的方式呈現，並有替身寵物系統
 
 # How to Use
 
@@ -50,58 +51,65 @@
   <summary><h3>屬性</h3></summary>
 
   <details>
-    <summary>性別</summary>
+    <summary>性別值</summary>
     <ul>
-      <li>#</li>
+      <li>影響配對</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>個體值</summary>
+    <ul>
+      <li>影響屬性成長</li>
     </ul>
   </details>
   
   <details>
-    <summary>高度</summary>
+    <summary>身高</summary>
     <ul>
-      <li>#</li>
+      <li>影響外觀</li>
     </ul>
   </details>
   
   <details>
     <summary>體重</summary>
     <ul>
-      <li>#</li>
+      <li>影響外觀</li>
     </ul>
   </details>
   
   <details>
     <summary>體力</summary>
     <ul>
-      <li>#</li>
+      <li>旅行中使用</li>
     </ul>
   </details>
 
   <details>
     <summary>力量</summary>
     <ul>
-      <li>傷害值</li>
+      <li>旅行中使用</li>
     </ul>
   </details>
 
   <details>
     <summary>智力</summary>
     <ul>
-      <li>經驗值</li>
+      <li>旅行中使用</li>
     </ul>
   </details>
 
   <details>
     <summary>敏捷</summary>
     <ul>
-      <li>速度</li>
+      <li>旅行中使用</li>
     </ul>
   </details>
 
   <details>
     <summary>幸運</summary>
     <ul>
-      <li>寶箱</li>
+      <li>旅行中使用</li>
     </ul>
   </details>
 
@@ -171,6 +179,13 @@
   </details>
 
   <details>
+    <summary>配對</summary>
+    <ul>
+      <li>外觀與個體值繼承</li>
+    </ul>
+  </details>
+
+  <details>
     <summary>旅行</summary>
     <ul>
       <li>提升經驗值</li>
@@ -179,9 +194,59 @@
           <li>對戰</li>
           <li>伴手禮</li>
           <li>飛鴿傳書</li>
+          <li>...</li>
         </ul>
     </ul>
   </details>
 </details>
 
 # Model
+
+### 宗旨與價值
+* 主次功能的重要性差別
+  * 設計次要的遊戲功能時會注意與主功能之間的平衡   
+* 對所有用戶保持零門檻
+  * 不花錢也能使用全部的功能，課金用戶所獲得的為附加功能 
+* 對課金玩家提供公平操作
+  * 提供機率的公平保證 
+
+### 主功能
+* 聲音社交，智能留聲機
+* 以好友動態、抖音、通訊軟體等功能來呈現
+* 日常使用中獲取代幣，或可由外部交易取得代幣
+* 代幣用於購買應用在本體的道具或是替身的道具
+
+### 次功能
+* 替身寵物系統，外觀為鳥類
+* 道具與替身系統需關聯
+  * ex. 變聲器裝備在替身上，本體使用替身，才能有變聲效果
+  * ex. 幫替身恢復體力
+* 替身有一套完整的遊戲系統
+
+### 外部資金進入的渠道
+* 商戶端消費
+  * 廣告需求 
+* 用戶端課金
+  * 取得特殊道具 
+
+### 用戶獲得代幣的方式
+* 搶廣告
+* 機率性取得寶箱
+* 空投
+* 用戶贊助
+* 樂透 福袋 彩池
+* 替身交易
+* App內交易
+* 外部交易所
+
+### 用戶使用代幣的方式
+* 贊助其他玩家
+* 廣告分潤
+* 投票
+* 樂透
+* 替身道具
+* 替身交易
+
+### 用戶兌換代幣的渠道
+* App內交易
+* 外部交易所

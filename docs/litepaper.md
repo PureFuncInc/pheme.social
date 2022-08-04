@@ -1,7 +1,7 @@
 # What is Pheme
 
 * Pheme 是一個以聲音為媒介的 Web 3.0 社群媒體
-* 以智能留聲機的方式呈現，並有替身寵物系統
+* 以 智能留聲機 的方式呈現並結合 替身寵物遊戲
 
 # How to Use
 
@@ -51,83 +51,94 @@
   <summary><h3>屬性</h3></summary>
 
   <details>
-    <summary>性別值</summary>
+    <summary>年齡 #標記</summary>
     <ul>
-      <li>影響配對</li>
+      <li>範圍 0 ~ ?</li>
     </ul>
   </details>
 
   <details>
-    <summary>個體值</summary>
+    <summary>經驗值</summary>
     <ul>
-      <li>影響屬性成長</li>
+      <li>範圍 0 ~ 9999</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>等級 #標記</summary>
+    <ul>
+      <li>範圍 0 ~ 99</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>性別值 #配對功能</summary>
+    <ul>
+      <li>範圍 0 ~ 100</li>
+      <li>可透過藥品改變數值</li>
     </ul>
   </details>
   
   <details>
-    <summary>身高</summary>
+    <summary>身高 #外觀</summary>
     <ul>
-      <li>影響外觀</li>
+      <li>範圍 1 ~ ?</li>
     </ul>
   </details>
   
   <details>
-    <summary>體重</summary>
+    <summary>體重 #外觀</summary>
     <ul>
-      <li>影響外觀</li>
+      <li>範圍 1 ~ ?</li>
     </ul>
   </details>
   
   <details>
-    <summary>體力</summary>
+    <summary>耐力 #旅行功能</summary>
     <ul>
-      <li>旅行中使用</li>
+      <li>範圍 1 ~ ?</li>
     </ul>
   </details>
 
   <details>
-    <summary>力量</summary>
+    <summary>力量 #旅行功能</summary>
     <ul>
-      <li>旅行中使用</li>
+      <li>範圍 1 ~ ?</li>
     </ul>
   </details>
 
   <details>
-    <summary>智力</summary>
+    <summary>智力 #旅行功能</summary>
     <ul>
-      <li>旅行中使用</li>
+      <li>範圍 1 ~ ?</li>
     </ul>
   </details>
 
   <details>
-    <summary>敏捷</summary>
+    <summary>敏捷 #旅行功能</summary>
     <ul>
-      <li>旅行中使用</li>
+      <li>範圍 1 ~ ?</li>
     </ul>
   </details>
 
   <details>
-    <summary>幸運</summary>
+    <summary>幸運 #旅行功能</summary>
     <ul>
-      <li>旅行中使用</li>
+      <li>範圍 1 ~ ?</li>
     </ul>
   </details>
 
   <details>
-    <summary>等級</summary>
+    <summary>稀有度 #個體值 #外觀</summary>
     <ul>
-      <li>LV1 ~ LV100</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>稀有度</summary>
-    <ul>
-      <li>灰</li>
-      <li>白</li>
-      <li>藍</li>
-      <li>黃</li>
-      <li>綠</li>
+      <li>每階範圍 0 ~ 10</li>
+      <ul>
+        <li>灰</li>
+        <li>白</li>
+        <li>藍</li>
+        <li>黃</li>
+        <li>綠</li>
+      </ul>
     </ul>
   </details>
 </details>

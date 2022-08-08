@@ -51,9 +51,10 @@
   <summary><h3>屬性</h3></summary>
 
   <details>
-    <summary>年齡 #標記</summary>
+    <summary>年齡</summary>
     <ul>
       <li>範圍 0 ~ ?</li>
+      <li>以天計</li>
     </ul>
   </details>
 
@@ -61,84 +62,112 @@
     <summary>經驗值</summary>
     <ul>
       <li>範圍 0 ~ 9999</li>
+      <li>每次旅行歸來得到不定量的經驗值</li>
     </ul>
   </details>
 
   <details>
-    <summary>等級 #標記</summary>
+    <summary>等級</summary>
     <ul>
       <li>範圍 0 ~ 99</li>
+      <li>等級 = 經驗值 / 100</li>
+      <li>每次升級得到不定量的耐力力量智力敏捷幸運提升</li>
+      <li>#影響外觀</li>
     </ul>
   </details>
 
   <details>
-    <summary>性別值 #配對功能</summary>
+    <summary>性別值</summary>
     <ul>
       <li>範圍 0 ~ 100</li>
-      <li>可透過藥品改變數值</li>
+      <li>根據吃的飼料影響值</li>
+      <li>#影響外觀</li>
     </ul>
   </details>
   
   <details>
-    <summary>身高 #外觀</summary>
+    <summary>身高</summary>
     <ul>
       <li>範圍 1 ~ ?</li>
+      <li>根據吃的飼料影響值</li>
+      <li>#影響外觀</li>
     </ul>
   </details>
   
   <details>
-    <summary>體重 #外觀</summary>
+    <summary>體重</summary>
     <ul>
       <li>範圍 1 ~ ?</li>
+      <li>根據吃的飼料影響值</li>
+      <li>#影響外觀</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>稀有度 (個體值)</summary>
+    <ul>
+      <li>灰色稀有度 範圍 0 ~ 9</li>
+      <li>白色稀有度 範圍 10 ~ 19</li>
+      <li>藍色稀有度 範圍 20 ~ 29</li>
+      <li>黃色稀有度 範圍 30 ~ 39</li>
+      <li>綠色稀有度 範圍 40 ~ 49</li>
+      <li>出生的時候決定</li>
+      <li>交配的時候會參考雙親</li>
+      <li>合併的時候機率性升級</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>交配</summary>
+    <ul>
+      <li>範圍 0 ~ 7</li>
+      <li>每次交配之後次數加一</li>
+      <li>融合之後歸零</li>
     </ul>
   </details>
   
   <details>
-    <summary>耐力 #旅行功能</summary>
+    <summary>耐力</summary>
     <ul>
       <li>範圍 1 ~ ?</li>
+      <li>每次升級得到不定量的提升</li>
+      <li>#旅行功能</li>
     </ul>
   </details>
 
   <details>
-    <summary>力量 #旅行功能</summary>
+    <summary>力量</summary>
     <ul>
       <li>範圍 1 ~ ?</li>
+      <li>每次升級得到不定量的提升</li>
+      <li>#旅行功能</li>
     </ul>
   </details>
 
   <details>
-    <summary>智力 #旅行功能</summary>
+    <summary>智力</summary>
     <ul>
       <li>範圍 1 ~ ?</li>
+      <li>每次升級得到不定量的提升</li>
+      <li>#旅行功能</li>
     </ul>
   </details>
 
   <details>
-    <summary>敏捷 #旅行功能</summary>
+    <summary>敏捷</summary>
     <ul>
       <li>範圍 1 ~ ?</li>
+      <li>每次升級得到不定量的提升</li>
+      <li>#旅行功能</li>
     </ul>
   </details>
 
   <details>
-    <summary>幸運 #旅行功能</summary>
+    <summary>幸運</summary>
     <ul>
       <li>範圍 1 ~ ?</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>稀有度 #個體值 #外觀</summary>
-    <ul>
-      <li>每階範圍 0 ~ 10</li>
-      <ul>
-        <li>灰</li>
-        <li>白</li>
-        <li>藍</li>
-        <li>黃</li>
-        <li>綠</li>
-      </ul>
+      <li>每次升級得到不定量的提升</li>
+      <li>#旅行功能</li>
     </ul>
   </details>
 </details>
@@ -147,7 +176,7 @@
   <summary><h3>道具</h3></summary>
 
   <details>
-    <summary>本體使用的道具</summary>
+    <summary>影響本體的道具</summary>
     <ul>
       <li>變聲器 -> 改變輸出的聲音</li>
       <li>麥克風 -> 增加聲音輸入的時長</li>
@@ -156,7 +185,7 @@
   </details>
 
   <details>
-    <summary>替身使用的道具</summary>
+    <summary>影響替身的道具</summary>
     <ul>
       <li>食物</li>
       <li>藥品</li>

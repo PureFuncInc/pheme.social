@@ -37,9 +37,9 @@
 
 # The Token
 
-### BNB or SOL
+### 智能合約生態系
 
-* BSC or Solana 智能鏈的原生代幣
+* ETH 2.0 or BNB or SOL
 
 ### Pheme Token
 

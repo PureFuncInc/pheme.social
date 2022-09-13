@@ -197,7 +197,7 @@
     <summary>使用</summary>
     <ul>
       <li>裝備</li>
-      <li>喂吃</li>
+      <li>喂食</li>
     </ul>
   </details>
 

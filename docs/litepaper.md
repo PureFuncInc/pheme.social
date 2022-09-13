@@ -37,131 +37,75 @@
 
 # The Token
 
-* Solana & Pheme
+* Solana
+* Pheme Token on **Solana Chain**
 
 # Gaming
 
 <details>
   <summary><h3>屬性</h3></summary>
-
+  
   <details>
-    <summary>年齡</summary>
+    <summary>生理數值</summary>
     <ul>
-      <li>範圍 0 ~ ?</li>
-      <li>以天計</li>
+      <li>年齡</li>
+      <ul>
+        <li>範圍 0day ~ ?</li>
+        <li>根據日期改變</li>
+      </ul>
+      <li>身高</li>
+      <ul>
+        <li>範圍 50cm ~ ?</li>
+        <li>根據吃的食物影響</li>
+        <li>影響外觀</li>
+      </ul> 
+      <li>體重</li>
+      <ul>
+        <li>範圍 1000g ~ ?</li>
+        <li>根據吃的食物影響</li>
+        <li>影響外觀</li>
+      </ul>
+      <li>性別值</li>
+       <ul>
+        <li>範圍 1% ~ 99%</li>
+        <li>根據吃的食物影響</li>
+        <li>交配功能</li>
+      </ul>
     </ul>
   </details>
-
+  
   <details>
-    <summary>經驗值</summary>
+    <summary>基礎數值</summary>
     <ul>
-      <li>範圍 0 ~ 9999</li>
-      <li>每次旅行歸來得到不定量的經驗值</li>
+      <li>力量</li>
+      <ul>
+        <li>範圍 1 ~ ?</li>
+        <li>升級時改變，根據吃的食物影響，根據裝備影響</li>
+        <li>其他功能的基準 (旅行、對戰)</li>
+      </ul>
+      <li>智力</li>
+      <ul>
+        <li>範圍 1 ~ ?</li>
+        <li>升級時改變，根據吃的食物影響，根據裝備影響</li>
+        <li>其他功能的基準 (旅行、對戰)</li>
+      </ul> 
+      <li>敏捷</li>
+      <ul>
+        <li>範圍 1 ~ ?</li>
+        <li>升級時改變，根據吃的食物影響，根據裝備影響</li>
+        <li>其他功能的基準 (旅行、對戰)</li>
+      </ul>
+      <li>幸運</li>
+       <ul>
+        <li>範圍 1 ~ ?</li>
+        <li>升級時改變，根據吃的食物影響，根據裝備影響</li>
+        <li>其他功能的基準 (旅行、對戰)</li>
+      </ul>
     </ul>
   </details>
-
+  
   <details>
-    <summary>等級</summary>
-    <ul>
-      <li>範圍 0 ~ 99</li>
-      <li>等級 = 經驗值 / 100</li>
-      <li>每次升級得到不定量的耐力力量智力敏捷幸運提升</li>
-      <li>#影響外觀</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>性別值</summary>
-    <ul>
-      <li>範圍 0 ~ 100</li>
-      <li>根據吃的飼料影響值</li>
-      <li>#影響外觀</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>身高</summary>
-    <ul>
-      <li>範圍 1 ~ ?</li>
-      <li>根據吃的飼料影響值</li>
-      <li>#影響外觀</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>體重</summary>
-    <ul>
-      <li>範圍 1 ~ ?</li>
-      <li>根據吃的飼料影響值</li>
-      <li>#影響外觀</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>耐力</summary>
-    <ul>
-      <li>範圍 1 ~ 100</li>
-      <li>吃飼料來進行補充</li>
-      <li>旅行歸來後消耗不定量的數值</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>稀有度 (個體值)</summary>
-    <ul>
-      <li>藍色稀有度 範圍 1 ~ 10</li>
-      <li>黃色稀有度 範圍 11 ~ 20</li>
-      <li>綠色稀有度 範圍 21 ~ 30</li>
-      <li>出生的時候決定</li>
-      <li>融合的時候機率性升級</li>
-      <li>交配的時候會參考雙親</li>
-      <li>#影響外觀</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>交配</summary>
-    <ul>
-      <li>範圍 0 ~ 7</li>
-      <li>每次交配之後次數加一</li>
-      <li>融合之後歸零</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>力量</summary>
-    <ul>
-      <li>範圍 1 ~ ?</li>
-      <li>每次升級得到不定量的提升</li>
-      <li>#旅行功能</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>智力</summary>
-    <ul>
-      <li>範圍 1 ~ ?</li>
-      <li>每次升級得到不定量的提升</li>
-      <li>#旅行功能</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>敏捷</summary>
-    <ul>
-      <li>範圍 1 ~ ?</li>
-      <li>每次升級得到不定量的提升</li>
-      <li>#旅行功能</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>幸運</summary>
-    <ul>
-      <li>範圍 1 ~ ?</li>
-      <li>每次升級得到不定量的提升</li>
-      <li>#旅行功能</li>
-    </ul>
+    <summary>其他數值</summary>
   </details>
 </details>
 

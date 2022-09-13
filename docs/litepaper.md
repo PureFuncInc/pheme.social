@@ -183,19 +183,21 @@
 
 <details>
   <summary><h3>行為</h3></summary>
-
+  
   <details>
-    <summary>裝備</summary>
+    <summary>購買</summary>
     <ul>
-      <li>讓本體獲得功能</li>
+      <li>盲盒</li>
+      <li>道具</li>
+      <li>食物</li>
     </ul>
   </details>
-
+  
   <details>
-    <summary>餵食</summary>
+    <summary>使用</summary>
     <ul>
-      <li>恢復體力</li>
-      <li>增加屬性</li>
+      <li>裝備</li>
+      <li>喂吃</li>
     </ul>
   </details>
 
@@ -219,23 +221,14 @@
   </details>
 
   <details>
-    <summary>抽盲盒</summary>
-    <ul>
-      <li>一般盲盒</li>
-      <li>高級盲盒</li>
-      <li>特殊盲盒</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>拜訪</summary>
+    <summary>旅行</summary>
     <ul>
       <li>提升經驗值</li>
       <li>消耗耐力</li>
       <ul>
-        <li>打架</li>
+        <li>拜訪</li>
+        <li>對戰</li>
         <li>伴手禮</li>
-        <li>飛鴿傳書</li>
         <li>寶箱</li>
       </ul>
     </ul>
@@ -275,6 +268,8 @@
     * 融合
     * 交配
     * 旅行
+    * 拜訪
+    * 對戰
 
 ### 外部資金進入的渠道
 

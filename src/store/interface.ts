@@ -1,3 +1,5 @@
+import ApiState from './modules/api/interface';
+
 export default interface RootState {
-  showNavList: boolean,
+  api: ApiState
 }

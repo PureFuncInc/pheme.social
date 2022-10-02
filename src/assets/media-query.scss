@@ -1,4 +1,9 @@
 @mixin media($point) {
+  @if $point == 'xs' {
+    @media (max-width: 576px) {
+      @content
+    }
+  };
   @if $point == 'sm' {
     @media (max-width: 768px) {
       @content

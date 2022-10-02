@@ -14,8 +14,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue';
-import { useStore } from '@/store';
+import { defineComponent } from 'vue';
 import HeaderComponent from '@/components/Header.vue';
 import BannerBlock from '@/components/Home/BannerBlock.vue';
 import IntroBlock from '@/components/Home/IntroBlock.vue';
@@ -38,10 +37,7 @@ export default defineComponent({
     FooterComponent,
   },
   setup() {
-    const store = useStore();
-    const showNavList = computed(() => store.state.showNavList);
     return {
-      showNavList,
     };
   },
 });

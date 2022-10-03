@@ -14,18 +14,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue';
-import { useStore } from '@/store';
+import { defineComponent } from 'vue';
 import toDownloadApp from '@/utils/toDownloadApp';
 
 export default defineComponent({
   name: 'HeaderComponent',
   setup() {
-    const store = useStore();
-    const showNavList = computed(() => store.state.showNavList);
     const downloadApp = () => toDownloadApp();
     return {
-      showNavList,
       downloadApp,
     };
   },

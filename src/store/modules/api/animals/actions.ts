@@ -1,8 +1,8 @@
-import { Dispatch } from 'vuex';
-import { createApiType, createApiMutationTypes } from '@/store/types/typeHelper';
-import { API_REQUEST_ACTION_TYPE } from '@/store/types';
+import {Dispatch} from 'vuex';
+import {createApiMutationTypes, createApiType} from '@/store/types/typeHelper';
+import {API_REQUEST_ACTION_TYPE} from '@/store/types';
 
-const namespace = '/public/animals';
+const namespace = '/public/kogi';
 
 export const Types = {
   ...createApiType([

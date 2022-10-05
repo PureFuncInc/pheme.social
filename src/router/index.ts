@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -7,7 +7,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/Home.vue'),
   },
   {
-    path: '/sutando/:uuid',
+    path: '/kogi/:uuid',
     name: 'SutandoDisplayPage',
     component: () => import('@/views/sutando/_uuid.vue'),
   },

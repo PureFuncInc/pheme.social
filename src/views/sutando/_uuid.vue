@@ -31,11 +31,11 @@
         </div>
         <div class="height">
           <div class="title">身高</div>
-          <div class="score">{{ sutandoData.height }} <span>m</span></div>
+          <div class="score">{{ sutandoData.height }} <span>cm</span></div>
         </div>
         <div class="weight">
           <div class="title">體重</div>
-          <div class="score">{{ sutandoData.weight }} <span>kg</span></div>
+          <div class="score">{{ sutandoData.weight }} <span>g</span></div>
         </div>
         <div class="gender">
           <div class="title">性別值</div>
@@ -92,9 +92,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, onMounted } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
-import { useStore } from '@/store';
+import {computed, defineComponent, onMounted} from 'vue';
+import {useRoute, useRouter} from 'vue-router';
+import {useStore} from '@/store';
 
 export default defineComponent({
   name: 'SutandoDisplayPage',

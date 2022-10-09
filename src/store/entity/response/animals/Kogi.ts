@@ -21,7 +21,7 @@ class Kogi {
       level: 0,
       rarity: '',
       mating: 0,
-      abilities: 'NONE',
+      abilities: ['NONE'],
     },
   ) {
     this.kogi = kogi;

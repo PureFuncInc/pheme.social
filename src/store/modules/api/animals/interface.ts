@@ -15,7 +15,7 @@ export interface Kogi {
   level: number,
   rarity: string,
   mating: number,
-  abilities: 'NONE' | 'FIRE' | 'RAINY',
+  abilities: ('NONE' | 'FIRE' | 'RAINY')[],
 }
 
 export default interface State {

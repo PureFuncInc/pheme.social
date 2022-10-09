@@ -1,4 +1,4 @@
-export interface Sutando {
+export interface Kogi {
   uuid: number,
   name: string,
   imageUrl: string,
@@ -20,8 +20,8 @@ export interface Sutando {
 }
 
 export default interface State {
-  sutando: Sutando,
-  getSutando: {
+  kogi: Kogi,
+  getKogi: {
     requesting: boolean;
   };
 }

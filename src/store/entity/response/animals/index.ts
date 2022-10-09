@@ -1,5 +1,5 @@
-import Sutando from './Sutando';
+import Kogi from './Kogi';
 
 export default {
-  Sutando,
+  Kogi,
 };

@@ -1,10 +1,10 @@
-import { Sutando as SutandoInterface } from '@/store/modules/api/animals/interface';
+import { Kogi as KogiInterface } from '@/store/modules/api/animals/interface';
 
-class Sutando {
-  private sutando;
+class Kogi {
+  private kogi;
 
   constructor(
-    sutando: SutandoInterface = {
+    kogi: KogiInterface = {
       uuid: 0,
       name: '',
       imageUrl: '',
@@ -25,12 +25,12 @@ class Sutando {
       status: '',
     },
   ) {
-    this.sutando = sutando;
+    this.kogi = kogi;
   }
 
   serialize() {
-    return this.sutando;
+    return this.kogi;
   }
 }
 
-export default Sutando;
+export default Kogi;

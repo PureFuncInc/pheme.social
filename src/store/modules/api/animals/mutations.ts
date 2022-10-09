@@ -1,20 +1,20 @@
 import { animals } from '@/store/entity/response';
-import State, { Sutando } from './interface';
+import State, { Kogi } from './interface';
 import { Types } from './actions';
 
 export default {
-  [Types.FETCH_GET_SUTANDO_FETCHING](state: State) {
-    state.getSutando.requesting = true;
+  [Types.FETCH_GET_KOGI_FETCHING](state: State) {
+    state.getKogi.requesting = true;
   },
-  [Types.FETCH_GET_SUTANDO_SUCCESS](
+  [Types.FETCH_GET_KOGI_SUCCESS](
     state: State,
-    payload: Sutando,
+    payload: Kogi,
   ) {
-    state.sutando = new animals.Sutando(payload).serialize();
-    state.getSutando.requesting = false;
+    state.kogi = new animals.Kogi(payload).serialize();
+    state.getKogi.requesting = false;
   },
-  [Types.FETCH_GET_SUTANDO_FAILED](state: State) {
-    state.sutando = new animals.Sutando().serialize();
-    state.getSutando.requesting = false;
+  [Types.FETCH_GET_KOGI_FAILED](state: State) {
+    state.kogi = new animals.Kogi().serialize();
+    state.getKogi.requesting = false;
   },
 };

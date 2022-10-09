@@ -2,7 +2,7 @@
 
 ## Project setup
 ```
-npm install
+npm ci
 ```
 
 ### Compiles and hot-reloads for development
@@ -18,6 +18,12 @@ npm run build:prod
 ### Lints and fixes files
 ```
 npm run lint
+```
+
+### Deploy
+```
+zip -r dist.zip dist
+scp dist.zip office:~
 ```
 
 ### Customize configuration

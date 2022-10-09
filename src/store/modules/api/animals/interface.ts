@@ -2,9 +2,8 @@ export interface Kogi {
   uuid: number,
   name: string,
   imageUrl: string,
+  nftUrl: string,
   age: number,
-  experience: number,
-  level: number,
   sex: number,
   height: number,
   weight: number,
@@ -13,10 +12,10 @@ export interface Kogi {
   intelligence: number,
   dexterity: number,
   luck: number,
-  individual: string,
+  level: number,
   rarity: string,
-  matingCount: number,
-  status: string
+  mating: number,
+  abilities: 'NONE' | 'FIRE' | 'RAINY',
 }
 
 export default interface State {

@@ -16,8 +16,8 @@ jobs:
         with:
           node-version: v16
           cache: 'npm'
-      - name: npm install
-        run: npm install
+      - name: npm ci
+        run: npm ci
       - name: clean
         run: rm -rf dist
       - name: npm run build:prod

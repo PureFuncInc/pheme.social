@@ -20,7 +20,7 @@
           </div>
           <div class="casting">
             <div class="title">鑄造</div>
-            <div class="score">{{ kogiData.level }} / 7</div>
+            <div class="score">{{ kogiData.mating }} / 7</div>
           </div>
         </div>
       </div>

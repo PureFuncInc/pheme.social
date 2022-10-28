@@ -200,6 +200,9 @@ export default defineComponent({
             font-weight: 500;
           }
         }
+        .name {
+          margin-top: 0;
+        }
       }
     }
     .sub-info {
@@ -274,6 +277,12 @@ export default defineComponent({
             }
           }
         }
+      }
+      .group-1 {
+        width: calc(50% - 20px);
+      }
+      .group-2 {
+        width: calc(50% + 20px);
       }
     }
   }
@@ -386,10 +395,13 @@ export default defineComponent({
           .height,
           .weight,
           .gender {
-            margin: 24px 12px 0;
-          }
-          .gender {
-            margin-right: 12px;
+            width: calc(50% - 12px);
+            margin: 24px 0 0;
+            .score {
+              > div {
+                justify-content: flex-end;
+              }
+            }
           }
         }
       }

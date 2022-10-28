@@ -9,7 +9,10 @@
           <img :src="kogiData.imageUrl" alt="" />
         </div>
         <div class="data">
-          <div class="name">#{{ kogiData.name }}</div>
+          <div class="name">
+            <div class="title">姓名</div>
+            <div class="score">{{ kogiData.name }}</div>
+          </div>
           <div class="rarity">
             <div class="title">稀有度</div>
             <div class="score">{{ kogiData.rarity }}</div>
@@ -175,12 +178,7 @@ export default defineComponent({
         flex: 1;
         order: 1;
         text-align: left;
-        .name {
-          color: $font_dark;
-          font-size: 20px;
-          font-weight: 500;
-          margin-bottom: 30px;
-        }
+        .name,
         .rarity,
         .level,
         .casting {
@@ -196,8 +194,9 @@ export default defineComponent({
           }
           .score {
             margin-left: 44px;
+            width: 250px;
             color: $font_dark;
-            font-size: 40px;
+            font-size: 32px;
             font-weight: 500;
           }
         }
@@ -208,12 +207,9 @@ export default defineComponent({
       max-width: 696px;
       height: 72px;
       display: flex;
-      justify-content: space-between;
       .group-1,
       .group-2 {
-        width: 50%;
         display: flex;
-        justify-content: space-between;
         .age,
         .height,
         .weight,

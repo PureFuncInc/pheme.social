@@ -23,6 +23,6 @@ jobs:
       - name: npm run build:prod
         run: npm run build:prod
       - name: deploy
-        run: sh deploy.sh
+        run: sh deploy-ci.sh
         env:
           GITHUB_REF_NAME: ${{ github.GITHUB_REF_NAME }}

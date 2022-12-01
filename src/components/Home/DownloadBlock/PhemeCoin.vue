@@ -1,11 +1,5 @@
 <template>
-  <div class="phemeCoin">
-    <img class="coin" src="@/assets/home/downloadBlock/coin.png" alt="" />
-    <img class="blue-star-01" src="@/assets/home/downloadBlock/blueStar.png" alt="" />
-    <img class="blue-star-02" src="@/assets/home/downloadBlock/blueStar.png" alt="" />
-    <img class="yellow-star-01" src="@/assets/home/downloadBlock/yellowStar.png" alt="" />
-    <img class="yellow-star-02" src="@/assets/home/downloadBlock/yellowStar.png" alt="" />
-  </div>
+  <div class="phemeCoin" />
 </template>
 
 <script lang="ts">
@@ -22,47 +16,19 @@ export default defineComponent({
 <style scoped lang="scss">
 .phemeCoin {
   position: relative;
-  width: 250px;
-  height: 180px;
-  .coin {
+  width: 310px;
+  height: 323px;
+  background: url('@/assets/home/downloadBlock/Frame.png') no-repeat center;
+  background-size: 100% auto;
+  &::before {
+    content: '';
     position: absolute;
-    top: calc(50% - 60px);
-    left: calc(50% - 60px);
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-  }
-  .blue-star-01 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 21px;
-    height: 21px;
-    object-fit: contain;
-  }
-  .blue-star-02 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 23px;
-    height: 23px;
-    object-fit: contain;
-  }
-  .yellow-star-01 {
-    position: absolute;
-    top: 11px;
-    left: 16px;
-    width: 17px;
-    height: 17px;
-    object-fit: contain;
-  }
-  .yellow-star-02 {
-    position: absolute;
-    bottom: 23px;
-    right: 26px;
-    width: 17px;
-    height: 17px;
-    object-fit: contain;
+    top: 75px;
+    left: 51px;
+    width: 196px;
+    height: 196px;
+    background: url('@/assets/home/downloadBlock/coin.png') no-repeat center;
+    background-size: 100% auto;
   }
 }
 

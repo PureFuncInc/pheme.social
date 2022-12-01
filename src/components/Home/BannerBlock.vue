@@ -1,17 +1,57 @@
 <template>
   <div class="banner">
-    <div class="container">
-      <div class="content">
-        <div class="title">聆聽彼此的聲音<br>分享屬於我們的故事</div>
-        <div class="description">
-          透過聲音的交流，來了解彼此想法。使用感官來聆聽聲音的美學，聽見彼此內心的聲音。
-        </div>
-        <button class="downloadApp" @click="downloadApp()" @keydown="downloadApp()">立即下載APP</button>
+    <div class="content">
+      <div class="title">
+        <b>Listening</b> others <i>Voice.</i><br />Sharing <b>Our Stories.</b>
       </div>
-      <picture class="phone">
-        <source />
-        <img src="@/assets/home/phone_pc.png" alt="" loading="lazy"/>
-      </picture>
+      <div class="description">
+        Pheme is a Web 3.0 SocialFi App mainly<br />
+        focused on Voice.
+      </div>
+      <div class="downloadApp">
+        <a
+          class="ios"
+          href="https://apps.apple.com/tw/app/pheme/id1625126616"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src="@/assets/home/apple.svg" alt="app store" />
+        </a>
+        <a
+          class="android"
+          href="https://play.google.com/store/apps/details?id=net.purefunc.voice"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src="@/assets/home/google.svg" alt="google play" />
+        </a>
+      </div>
+    </div>
+    <picture class="phone">
+      <img src="@/assets/home/phone_pc.png" alt="" loading="lazy" />
+    </picture>
+    <div class="contact">
+      <div class="poweredBy">
+        <div class="name">POWERED BY</div>
+        <i />
+      </div>
+      <div class="ourSocials">
+        <div class="name">OUR SOCIALS</div>
+        <ul class="link">
+          <a href="https://discord.pheme.social" target="_blank" rel="noreferrer noopener">
+            <img src="@/assets/home/contactUsBlock/discord.svg" alt="discord" />
+          </a>
+          <a href="https://twitter.com/pheme_social" target="_blank" rel="noreferrer noopener">
+            <img src="@/assets/home/contactUsBlock/twitter.svg" alt="twitter" />
+          </a>
+          <a href="https://t.me/pheme_social" target="_blank" rel="noreferrer noopener">
+            <img src="@/assets/home/contactUsBlock/telegram.svg" alt="telegram" />
+          </a>
+          <a href="https://docs.pheme.social" target="_blank" rel="noreferrer noopener">
+            <img src="@/assets/home/contactUsBlock/knowledge.svg" alt="knowledge" />
+          </a>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -33,81 +73,130 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .banner {
-  height: 1024px;
-  background:
-    url("@/assets/home/bannerBlock/background-pc-wave.png") no-repeat center,
-    linear-gradient(316.04deg, #0086FF 35.9%, #07BAFE 106.37%);
-  background-size: cover;
-  padding: 0 64px;
-  box-sizing: border-box;
-  .container {
-    margin: 0 auto;
-    max-width: 1280px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    .content {
-      width: 566px;
-      color: #FFFFFF;
-      text-align: left;
-      .title {
+  padding: 202px 32px 0;
+  margin: 0 auto;
+  width: 960px;
+  position: relative;
+  .content {
+    width: 566px;
+    color: $font_dark;
+    text-align: left;
+    .title {
+      font-size: 46px;
+      line-height: 72px;
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+      b {
         font-weight: 700;
-        font-size: 48px;
       }
-      .description {
-        margin-top: 32px;
-        font-size: 24px;
-        font-weight: 500;
-      }
-      .downloadApp {
-        margin-top: 50px;
-        width: 180px;
-        height: 55px;
-        background: #FFFFFF;
-        border-radius: 35px;
-        font-weight: 500;
-        font-size: 16px;
-        color: $primary;
+      i {
+        font-style: normal;
+        font-weight: 700;
+        color: #3563e9;
       }
     }
-    .phone {
-      width: 677px;
-      height: 100%;
-      img {
+    .description {
+      width: 464px;
+      margin-top: 16px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: 0.03em;
+      color: $font_gray_light;
+    }
+    .downloadApp {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+      width: 442px;
+      height: 64px;
+      > a {
         display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+        &.ios {
+          width: 214px;
+          height: 64px;
+        }
+        &.android {
+          width: 214px;
+          height: 64px;
+        }
+      }
+    }
+  }
+  .phone {
+    position: absolute;
+    top: 196px;
+    right: -108px;
+    width: 712px;
+    height: 475px;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 320px;
+      width: 330px;
+      height: 358.06px;
+      background: url("@/assets/home/bird.svg") no-repeat center;
+      background-size: 100% auto;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .contact {
+    margin: 157px auto 0;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    > div {
+      .name {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.03em;
+        color: $font_dark;
+      }
+    }
+    .poweredBy {
+      i {
+        margin-top: 20px;
+        display: block;
+        width: 160px;
+        height: 24px;
+        background: url("@/assets/home/solana.svg") no-repeat center;
+        background-size: 100% auto;
+      }
+    }
+
+    .ourSocials {
+      .link {
+        margin-top: 20px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        >a {
+          display: block;
+          width: 32px;
+          height: 32px;
+          >img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
       }
     }
   }
 }
 
 @include media(sm) {
-  .banner {
-    height: auto;
-    padding: 92px 0 50px;
-    .container {
-      flex-direction: column;
-      .content {
-        padding: 0 24px;
-        order: 2;
-        width: auto;
-        text-align: center;
-        .title {
-          font-size: 24px;
-        }
-        .description {
-          margin-top: 16px;
-          font-size: 18px;
-        }
-      }
-      .phone {
-        order: 1;
-        width: 100%;
-        height: 550px;
-      }
-    }
-  }
 }
 </style>

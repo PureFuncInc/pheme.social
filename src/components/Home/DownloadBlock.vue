@@ -1,10 +1,12 @@
 <template>
   <div class="download-block">
-    <div class="title">獲得 PHEME 幣</div>
-    <div class="subtitle">聆聽來自各地的聲音，透過聲音的傳輸，讓你擁有身歷其境的感受</div>
+    <div class="title">$PHEME</div>
+    <div class="subtitle">
+      Social App Features in Pheme were designed to playing pet games and introducing token
+      economics for adaptive cyclling.
+    </div>
     <pheme-coin class="pheme-coin" />
     <qr-block class="qr-block" />
-    <div class="download-slogan">立即下載PHEME，一起聆聽來自各地的聲音，有任何想法、觀點都可以直接交流。</div>
   </div>
 </template>
 
@@ -27,35 +29,28 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .download-block {
-  height: 1013px;
-  padding-top: 120px;
-  box-sizing: border-box;
+  margin-top: 60px;
+  padding-top: 60px;
   .title {
     font-weight: 500;
     font-size: 32px;
     height: 46px;
     line-height: 46px;
+    color: $font_dark;
   }
   .subtitle {
-    margin: 10px auto 0;
+    margin: 16px auto 0;
     font-weight: 400;
     font-size: 20px;
-    width: 450px;
-    line-height: 29px;
-    color: $dark03;
+    width: 697px;
+    line-height: 40px;
+    color: $font_gray_light;
   }
   .pheme-coin {
-    margin: 50px auto 0;
+    margin: -14px auto 0;
   }
   .qr-block {
-    margin: 88px auto 0;
-  }
-  .download-slogan {
-    margin: 60px 25px 0;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 29px;
-    color: $dark03;
+    margin: 16px auto 0;
   }
 }
 @include media(sm) {

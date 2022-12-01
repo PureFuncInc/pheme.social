@@ -9,4 +9,9 @@
       @content
     }
   };
+  @if $point == 'md' {
+    @media (max-width: 960px) {
+      @content
+    }
+  };
 }

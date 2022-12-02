@@ -1,4 +1,16 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import {
+  createRouter, createWebHistory, RouteRecordRaw, RouterScrollBehavior,
+} from 'vue-router';
+
+const scrollBehavior: RouterScrollBehavior = (to) => {
+  if (to.hash) {
+    return {
+      el: to.hash,
+      behavior: 'smooth',
+    };
+  }
+  return { top: 0 };
+};
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -16,6 +28,7 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior,
 });
 
 export default router;

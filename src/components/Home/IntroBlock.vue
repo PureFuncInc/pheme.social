@@ -1,46 +1,56 @@
 <template>
-  <div class="introBlock">
-    <div class="title">透過聲音交流</div>
-    <div class="subtitle">聆聽來自各地的聲音，透過聲音的傳輸，讓你擁有身歷其境的感受</div>
-    <div class="play-button">
-      <img src="@/assets/home/introBlock/playButton.png" alt="" />
+  <div class="introBlock" id="about">
+    <div class="title">Pheme also a pet game. Everyone owns his unique Pheme pets.</div>
+    <div class="subtitle">
+      Each Pheme has physiological attributes (Height, Weight, etc.), basic attribute (STR, INT,
+      etc.) and other attributes (Rarity, Level, etc.).
     </div>
-    <play-card
-      class="play-card play-card-01"
-      :user-avatar="require('@/assets/home/introBlock/avatar01.png')"
-      user-name="Maxbergmann"
-      post-time="3 分鐘前"
-      text="Good Morning"
-    />
-    <play-card
-      class="play-card play-card-02"
-      :user-avatar="require('@/assets/home/introBlock/avatar02.png')"
-      user-name="Sully. zu"
-      post-time="1 小時前"
-      text="Holiday"
-    />
-    <play-card
-      class="play-card play-card-03"
-      :user-avatar="require('@/assets/home/introBlock/avatar03.png')"
-      user-name="LuuuLu"
-      post-time="3 分鐘前"
-      text="Nice Nice"
-    />
-    <play-wave-card class="play-wave-card play-wave-card-01" />
-    <play-wave-card class="play-wave-card play-wave-card-02" />
+    <div class="kogi-center" />
+    <div class="kogi-group">
+      <div class="card-container">
+        <kogi-card
+          class="kogi-card"
+          :kogi-pic="require('@/assets/home/introBlock/kogi01.png')"
+          background-color="#F7F4FB"
+          kogi-name="Molly Dawson"
+        />
+      </div>
+      <div class="card-container">
+        <kogi-card
+          class="kogi-card"
+          :kogi-pic="require('@/assets/home/introBlock/kogi02.png')"
+          background-color="#ECFAFC"
+          kogi-name="Martin Castro"
+        />
+      </div>
+      <div class="card-container">
+        <kogi-card
+          class="kogi-card"
+          :kogi-pic="require('@/assets/home/introBlock/kogi03.png')"
+          background-color="#F5F8F2"
+          kogi-name="Joy Nash"
+        />
+      </div>
+      <div class="card-container">
+        <kogi-card
+          class="kogi-card"
+          :kogi-pic="require('@/assets/home/introBlock/kogi04.png')"
+          background-color="#EFEAEE"
+          kogi-name="Vanessa Mills"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import PlayCard from '@/components/Home/IntroBlock/PlayCard.vue';
-import PlayWaveCard from '@/components/Home/IntroBlock/PlayWaveCard.vue';
+import KogiCard from '@/components/Home/IntroBlock/KogiCard.vue';
 
 export default defineComponent({
   name: 'IntroBlockComponent',
   components: {
-    PlayCard,
-    PlayWaveCard,
+    KogiCard,
   },
   setup() {
     return {};
@@ -49,121 +59,73 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@keyframes changeColor {
+  0% {
+    background: #ffa17d;
+  }
+  20% {
+    background: #5abebe;
+  }
+  40% {
+    background: #89c463;
+  }
+  60% {
+    background: #e47f80;
+  }
+  80% {
+    background: #f4dc90;
+  }
+}
 .introBlock {
-  overflow-x: hidden;
-  background: linear-gradient(
-      to bottom,
-      rgba(246, 248, 251, 0) 0%,
-      rgba(246, 248, 251, 0) 80%,
-      rgba(246, 248, 251, 1) 100%
-    ),
-    url("@/assets/home/introBlock/background-pc-wave.png") no-repeat center;
-  background-size: cover;
   position: relative;
-  height: 900px;
+  margin-top: 70px;
   padding-top: 75px;
-  box-sizing: border-box;
   .title {
+    margin: 0 auto;
+    max-width: 646px;
     font-weight: 500;
     font-size: 32px;
-    height: 46px;
     line-height: 46px;
+    letter-spacing: 0.03em;
+    color: $font_dark;
   }
   .subtitle {
-    margin: 10px auto 0;
+    margin: 16px auto 0;
+    max-width: 697px;
     font-weight: 400;
     font-size: 20px;
-    width: 450px;
-    line-height: 29px;
-    color: $dark03;
+    line-height: 40px;
+    letter-spacing: 0.03em;
+    color: $font_gray_light;
   }
-  .play-button {
+  .kogi-center {
     position: absolute;
-    top: 382px;
-    left: calc(50% - 68px);
-    width: 136px;
-    height: 136px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+    top: 543px;
+    width: 112px;
+    height: 124px;
+    left: calc(50% - 56px);
+    background: #ffa17d;
+    mask: url("@/assets/home/introBlock/kogi-center.svg");
+    animation: changeColor 10s linear infinite;
+  }
+  .kogi-group {
+    margin: 60px auto 0;
+    width: 840px;
+    height: 566px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    .card-container {
+      width: 50%;
+      &:nth-of-type(2n) {
+        .kogi-card {
+          float: right;
+        }
+      }
     }
-  }
-  .play-card,
-  .play-wave-card {
-    position: absolute;
-  }
-  .play-card-01 {
-    top: 222px;
-    left: calc(50% - 426px - 7vw);
-  }
-  .play-card-02 {
-    top: 366px;
-    right: calc(50% - 426px - 9vw);
-  }
-  .play-card-03 {
-    top: 621px;
-    left: calc(50% - 426px + 9vw);
-  }
-  .play-wave-card-01 {
-    top: 466px;
-    left: calc(50% - 285px - 22vw);
-  }
-  .play-wave-card-02 {
-    top: 626px;
-    right: calc(50% - 285px - 23vw);
   }
 }
 
 @include media(sm) {
-  .introBlock {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(246, 248, 251, 0) 0%,
-        rgba(246, 248, 251, 0) 80%,
-        rgba(246, 248, 251, 1) 100%
-      ),
-      url("@/assets/home/introBlock/background-mobile-wave.png") no-repeat center;
-    height: 812px;
-    padding-top: 47px;
-    .title {
-      font-size: 20px;
-      height: 29px;
-      line-height: 29px;
-    }
-    .subtitle {
-      margin: 12px 24px 0;
-      font-size: 14px;
-      width: auto;
-      line-height: 22px;
-    }
-    .play-button {
-      top: 363px;
-      left: calc(50% - 32px);
-      width: 64px;
-      height: 64px;
-    }
-    .play-card-01 {
-      top: 152px;
-      left: calc(50% - 120px - 9vw);
-    }
-    .play-card-02 {
-      top: 457px;
-      right: calc(50% - 120px - 3vw);
-    }
-    .play-card-03 {
-      top: 598px;
-      left: calc(50% - 120px + 7vw);
-    }
-    .play-wave-card-01 {
-      top: 293px;
-      left: calc(50% - 99px + 16vw);
-    }
-    .play-wave-card-02 {
-      top: 739px;
-      right: calc(50% - 99px + 13vw);
-    }
-  }
 }
 </style>

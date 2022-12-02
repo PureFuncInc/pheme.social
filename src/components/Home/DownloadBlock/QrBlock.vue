@@ -1,21 +1,16 @@
 <template>
   <div class="qrBlock">
-    <div class="download-btn">
-      <a class="google-play" :href="androidLink" target="_blank" rel="noreferrer noopener">
-        <img src="@/assets/home/downloadBlock/googlePlay.png" alt="google-play"/>
-      </a>
-      <a class="apple-play" :href="iosLink" target="_blank" rel="noreferrer noopener">
-        <img src="@/assets/home/downloadBlock/appleStore.png" alt="apple-play"/>
-      </a>
-    </div>
-    <img class="qr" :src="qrCodeSrc" alt="link.linkUrl" loading="lazy" />
+    <a class="google-play" :href="androidLink" target="_blank" rel="noreferrer noopener">
+      <img src="@/assets/home/google.svg" alt="google-play" />
+    </a>
+    <a class="apple-play" :href="iosLink" target="_blank" rel="noreferrer noopener">
+      <img src="@/assets/home/apple.svg" alt="apple-play" />
+    </a>
   </div>
 </template>
 
 <script lang="ts">
-import {
-  defineComponent, ref, onMounted,
-} from 'vue';
+import { defineComponent, ref, onMounted } from 'vue';
 import QRCodeStyling, {
   DrawType,
   TypeNumber,
@@ -78,9 +73,7 @@ export default defineComponent({
   name: 'QrBlock',
   setup() {
     const device = getDevice();
-    const qrLink = device === 'ios'
-      ? process.env.VUE_APP_IOS_APP_URL
-      : process.env.VUE_APP_ANDROID_APP_URL;
+    const qrLink = device === 'ios' ? process.env.VUE_APP_IOS_APP_URL : process.env.VUE_APP_ANDROID_APP_URL;
     const androidLink = process.env.VUE_APP_ANDROID_APP_URL;
     const iosLink = process.env.VUE_APP_IOS_APP_URL;
     const qrCodeSrc = ref('');
@@ -112,13 +105,13 @@ export default defineComponent({
 <style scoped lang="scss">
 .qrBlock {
   display: flex;
-  width: 450px;
-  height: 170px;
+  width: 442.67px;
+  height: 64px;
   justify-content: space-between;
   align-items: center;
   .download-btn {
-    width: 202px;
-    height: 100%;
+    width: 442.67px;
+    height: 64px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
@@ -132,10 +125,6 @@ export default defineComponent({
         object-fit: contain;
       }
     }
-  }
-  .qr {
-    width: 145px;
-    height: 145px;
   }
 }
 @include media(sm) {

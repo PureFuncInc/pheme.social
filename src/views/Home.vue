@@ -5,8 +5,8 @@
       <banner-block />
       <intro-block />
       <download-block />
-      <timeline-block />
       <team-block />
+      <roadmap-block />
       <contact-us-block />
       <footer-component />
     </div>
@@ -18,7 +18,7 @@ import { defineComponent } from 'vue';
 import HeaderComponent from '@/components/Header.vue';
 import BannerBlock from '@/components/Home/BannerBlock.vue';
 import IntroBlock from '@/components/Home/IntroBlock.vue';
-import TimelineBlock from '@/components/Home/TimelineBlock.vue';
+import RoadmapBlock from '@/components/Home/RoadmapBlock.vue';
 import TeamBlock from '@/components/Home/TeamBlock.vue';
 import ContactUsBlock from '@/components/Home/ContactUsBlock.vue';
 import DownloadBlock from '@/components/Home/DownloadBlock.vue';
@@ -31,7 +31,7 @@ export default defineComponent({
     BannerBlock,
     IntroBlock,
     DownloadBlock,
-    TimelineBlock,
+    RoadmapBlock,
     TeamBlock,
     ContactUsBlock,
     FooterComponent,
@@ -50,7 +50,7 @@ export default defineComponent({
   height: 100%;
   min-height: 100vh;
   .container {
-    background: #F6F8FB;
+    background: $white;
   }
 }
 .fade-enter-active,

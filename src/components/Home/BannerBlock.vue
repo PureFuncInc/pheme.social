@@ -77,6 +77,7 @@ export default defineComponent({
   margin: 0 auto;
   width: 960px;
   position: relative;
+  overflow: hidden;
   .content {
     width: 566px;
     color: $font_dark;
@@ -182,11 +183,11 @@ export default defineComponent({
         display: flex;
         align-items: center;
         justify-content: space-between;
-        >a {
+        > a {
           display: block;
           width: 32px;
           height: 32px;
-          >img {
+          > img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -197,6 +198,80 @@ export default defineComponent({
   }
 }
 
-@include media(sm) {
+@include media(md) {
+  .banner {
+    padding: 88px 0 0;
+    width: 100%;
+    .content {
+      width: 100%;
+      text-align: center;
+      .title {
+        font-size: 30px;
+        line-height: 50px;
+      }
+      .description {
+        width: calc(100% - 48px);
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .downloadApp {
+        margin: 16px auto 0;
+        width: 230px;
+        height: 32px;
+        > a {
+          &.ios {
+            width: 106px;
+            height: 32px;
+          }
+          &.android {
+            width: 106px;
+            height: 32px;
+          }
+        }
+      }
+    }
+    .phone {
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      top: 64px;
+      right: auto;
+      width: 100%;
+      height: 345px;
+      &::before {
+        right: 50%;
+        transform: translateX(22%);
+        width: 240px;
+        height: 261px;
+      }
+      img {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        max-width: 519px;
+        height: 345px;
+        object-fit: cover;
+      }
+    }
+    .contact {
+      margin: 108px auto 0;
+      width: 100%;
+      display: block;
+      .poweredBy {
+        i {
+          margin: 20px auto 0;
+        }
+      }
+
+      .ourSocials {
+        margin-top: 64px;
+        .link {
+          margin: 20px auto 0;
+          width: 200px;
+        }
+      }
+    }
+  }
 }
 </style>

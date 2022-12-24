@@ -106,6 +106,7 @@ export default defineComponent({
     left: calc(50% - 56px);
     background: #ffa17d;
     mask: url("@/assets/home/introBlock/kogi-center.svg");
+    mask-size: contain;
     animation: changeColor 10s linear infinite;
   }
   .kogi-group {
@@ -117,6 +118,10 @@ export default defineComponent({
     align-content: space-between;
     .card-container {
       width: 50%;
+      .kogi-card {
+        width: 268.1px;
+        height: 267.43px;
+      }
       &:nth-of-type(2n) {
         .kogi-card {
           float: right;
@@ -126,6 +131,44 @@ export default defineComponent({
   }
 }
 
-@include media(sm) {
+@include media(md) {
+  .introBlock {
+    .title {
+      width: calc(100% - 48px);
+      max-width: 476px;
+      font-size: 22px;
+      line-height: 32px;
+    }
+    .subtitle {
+      width: calc(100% - 48px);
+      max-width: 476px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    .kogi-center {
+      position: relative;
+      top: 28px;
+      width: 58px;
+      height: 64px;
+      left: calc(50% - 29px);
+    }
+    .kogi-group {
+      margin: 32px auto 0;
+      width: calc(100% - 48px);
+      max-width: 375px;
+      height: 305px;
+      .card-container {
+        .kogi-card {
+          width: 144px;
+          height: 144px;
+        }
+        &:nth-of-type(2n) {
+          .kogi-card {
+            float: right;
+          }
+        }
+      }
+    }
+  }
 }
 </style>

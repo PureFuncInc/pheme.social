@@ -67,8 +67,12 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+.navigatePage {
+  display: none;
+}
 @include media(md) {
   .navigatePage {
+    display: block;
     visibility: hidden;
     opacity: 0;
     position: fixed;

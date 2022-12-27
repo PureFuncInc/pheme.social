@@ -27,9 +27,9 @@ export default defineComponent({
       },
       {
         timeLabel: '2022 Q4',
-        content: 'New feature for boosting adoption and earnings <br>#Public Beta',
+        content: 'New feature for boosting adoption and earnings <br>#Public Alpha',
       },
-      { timeLabel: '2023 Q1', content: 'IEO and initial listings on exchanges <br>#Public Alpha' },
+      { timeLabel: '2023 Q1', content: 'IEO and initial listings on exchanges <br>#Public Beta' },
     ]);
     return {
       roadmapList,

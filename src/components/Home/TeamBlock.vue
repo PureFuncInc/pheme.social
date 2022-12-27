@@ -3,37 +3,43 @@
     <div class="title">Our team</div>
     <div class="partner-group">
       <partner-card
-        pic="https://pheme.social/Wade.jpeg"
+        :pic="require('@/assets/home/teamBlock/Wade.png')"
+        background-color="#5ABEBE"
         name="Wade"
         title="Cofounder & CEO"
         description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
       />
       <partner-card
-        pic="https://pheme.social/Vincent.jpeg"
+        :pic="require('@/assets/home/teamBlock/Vincent.png')"
+        background-color="#546AB2"
         name="Vincent"
         title="Cofounder & Senior Developer"
         description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
       />
       <partner-card
-        pic="https://pheme.social/Nelson.jpeg"
+        :pic="require('@/assets/home/teamBlock/Nelson.png')"
+        background-color="#89C463"
         name="Nelson"
         title="Cofounder &  Senior Developer"
         description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
       />
       <partner-card
-        pic="https://pheme.social/Daniel.jpeg"
+        :pic="require('@/assets/home/teamBlock/Daniel.png')"
+        background-color="#BDBDBD"
         name="Daniel"
         title="Cofounder &  Senior Developer"
         description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
       />
       <partner-card
-        :pic="require('@/assets/home/teamBlock/april.png')"
+        :pic="require('@/assets/home/teamBlock/April.png')"
+        background-color="#FFA17D"
         name="April"
         title="UI / UX Director"
         description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
       />
       <partner-card
-      :pic="require('@/assets/home/teamBlock/yun.png')"
+        :pic="require('@/assets/home/teamBlock/Yun.png')"
+        background-color="#E47F80"
         name="Yun"
         title="Senior UI / UX Designer"
         description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
@@ -79,8 +85,24 @@ export default defineComponent({
   }
 }
 
-@include media(sm) {
+@include media(md) {
   .teamBlock {
+    margin-top: 55px;
+    padding-top: 55px;
+    .title {
+      font-size: 22px;
+      height: 32px;
+      line-height: 32px;
+    }
+    .partner-group {
+      margin: 26px auto 0;
+      width: 311px;
+      height: 678px;
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: space-between;
+      // align-content: space-between;
+    }
   }
 }
 </style>

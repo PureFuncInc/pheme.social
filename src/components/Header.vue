@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <button class="hamburger" />
+    <button class="hamburger" @click="openNavPage()"/>
     <router-link class="logo" to="/">
       <img src="@/assets/logo-text.svg" alt="" />
     </router-link>
@@ -19,24 +19,19 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import toDownloadApp from '@/utils/toDownloadApp';
+import { useStore } from '@/store';
 
 export default defineComponent({
   name: 'HeaderComponent',
   setup() {
-    const downloadApp = () => toDownloadApp();
-    const routerList = ref([
-      { label: 'About', path: '#about', internal: true },
-      { label: 'Team', path: '#team', internal: true },
-      { label: 'Roadmap', path: '#roadmap', internal: true },
-      { label: 'Token', path: 'https://docs.pheme.social/dai-bi-jing-ji/pheme-dai-bi' },
-      { label: 'How to Play', path: 'https://docs.pheme.social/ru-men-zhi-nan/kai-shi-you-hu' },
-      { label: 'Marketplace', path: 'https://docs.pheme.social/nft-shi-ji/shen-me-shi-shi-ji' },
-      { label: 'Paper', path: 'https://pheme.social/whitepaper' },
-    ]);
+    const store = useStore();
+    const routerList = ref(store.state.globalComponents.navigate.routerList);
+    function openNavPage() {
+      store.commit('globalComponents/openNavPage');
+    }
     return {
-      downloadApp,
       routerList,
+      openNavPage,
     };
   },
 });

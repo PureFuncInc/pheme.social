@@ -10,12 +10,14 @@
       <contact-us-block />
       <footer-component />
     </div>
+    <navigate-page />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import HeaderComponent from '@/components/Header.vue';
+import NavigatePage from '@/components/Home/Navigate.vue';
 import BannerBlock from '@/components/Home/BannerBlock.vue';
 import IntroBlock from '@/components/Home/IntroBlock.vue';
 import RoadmapBlock from '@/components/Home/RoadmapBlock.vue';
@@ -28,6 +30,7 @@ export default defineComponent({
   name: 'HomePage',
   components: {
     HeaderComponent,
+    NavigatePage,
     BannerBlock,
     IntroBlock,
     DownloadBlock,

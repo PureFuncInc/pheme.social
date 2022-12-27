@@ -1,5 +1,5 @@
 <template>
-  <div class="qrBlock">
+  <div class="download-btn">
     <a class="google-play" :href="androidLink" target="_blank" rel="noreferrer noopener">
       <img src="@/assets/home/google.svg" alt="google-play" />
     </a>
@@ -103,36 +103,18 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.qrBlock {
+.download-btn {
   display: flex;
-  width: 442.67px;
-  height: 64px;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  .download-btn {
-    width: 442.67px;
-    height: 64px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    a {
-      display: block;
+  a {
+    display: block;
+    width: 48%;
+    height: 100%;
+    img {
       width: 100%;
-      height: 60px;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-  }
-}
-@include media(sm) {
-  .qrBlock {
-    width: 153px;
-    height: 120px;
-    .qr {
-      display: none;
+      height: 100%;
+      object-fit: contain;
     }
   }
 }

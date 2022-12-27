@@ -6,20 +6,20 @@
       economics for adaptive cyclling.
     </div>
     <pheme-coin class="pheme-coin" />
-    <qr-block class="qr-block" />
+    <download-btn class="download-btn" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import PhemeCoin from '@/components/Home/DownloadBlock/PhemeCoin.vue';
-import QrBlock from '@/components/Home/DownloadBlock/QrBlock.vue';
+import DownloadBtn from '@/components/Home/DownloadBlock/DownloadBtn.vue';
 
 export default defineComponent({
   name: 'DownloadBlock',
   components: {
     PhemeCoin,
-    QrBlock,
+    DownloadBtn,
   },
   setup() {
     return {};
@@ -49,35 +49,34 @@ export default defineComponent({
   .pheme-coin {
     margin: -14px auto 0;
   }
-  .qr-block {
+  .download-btn {
     margin: 16px auto 0;
+    width: 442.67px;
+    height: 64px;
   }
 }
-@include media(sm) {
+@include media(md) {
   .download-block {
-    height: 619px;
-    padding-top: 70px;
+    margin-top: 50px;
+    padding-top: 50px;
     .title {
-      font-size: 20px;
-      height: 29px;
-      line-height: 29px;
+      font-size: 22px;
+      height: auto;
+      line-height: 32px;
     }
     .subtitle {
-      margin: 12px 24px 0;
-      font-size: 14px;
-      width: auto;
+      font-size: 16px;
+      width: calc(100% - 48px);
+      max-width: 476px;
       line-height: 22px;
     }
     .pheme-coin {
-      margin: 35px auto 0;
+      margin: 28px auto 0;
     }
-    .qr-block {
-      margin: 50px auto 0;
-    }
-    .download-slogan {
-      margin: 40px 25px 0;
-      font-size: 14px;
-      line-height: 22px;
+    .download-btn {
+      margin: 40px auto 0;
+      width: 229.33px;
+      height: 32px;
     }
   }
 }

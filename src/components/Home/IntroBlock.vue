@@ -13,6 +13,7 @@
           :kogi-pic="require('@/assets/home/introBlock/kogi01.png')"
           background-color="#F7F4FB"
           kogi-name="Molly Dawson"
+          kogi-rank="rank1"
         />
       </div>
       <div class="card-container">
@@ -21,6 +22,7 @@
           :kogi-pic="require('@/assets/home/introBlock/kogi02.png')"
           background-color="#ECFAFC"
           kogi-name="Martin Castro"
+          kogi-rank="rank2"
         />
       </div>
       <div class="card-container">
@@ -29,6 +31,7 @@
           :kogi-pic="require('@/assets/home/introBlock/kogi03.png')"
           background-color="#F5F8F2"
           kogi-name="Joy Nash"
+          kogi-rank="rank3"
         />
       </div>
       <div class="card-container">
@@ -37,6 +40,7 @@
           :kogi-pic="require('@/assets/home/introBlock/kogi04.png')"
           background-color="#EFEAEE"
           kogi-name="Vanessa Mills"
+          kogi-rank="rank5"
         />
       </div>
     </div>

@@ -20,14 +20,14 @@
         :pic="require('@/assets/home/teamBlock/Nelson.png')"
         background-color="#89C463"
         name="Nelson"
-        title="Cofounder &  Senior Developer"
+        title="Cofounder & Senior Developer"
         description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
       />
       <partner-card
         :pic="require('@/assets/home/teamBlock/Daniel.png')"
         background-color="#BDBDBD"
         name="Daniel"
-        title="Cofounder &  Senior Developer"
+        title="Cofounder & Senior Developer"
         description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
       />
       <partner-card

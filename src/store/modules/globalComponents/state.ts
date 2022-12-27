@@ -9,7 +9,7 @@ const state: State = {
       { label: 'Token', path: 'https://docs.pheme.social/dai-bi-jing-ji/pheme-dai-bi' },
       { label: 'How to Play', path: 'https://docs.pheme.social/ru-men-zhi-nan/kai-shi-you-hu' },
       { label: 'Marketplace', path: 'https://docs.pheme.social/nft-shi-ji/shen-me-shi-shi-ji' },
-      { label: 'Paper', path: 'https://pheme.social/whitepaper' },
+      { label: 'Paper', path: 'https://docs.pheme.social' },
     ],
     openNavPage: false,
   },

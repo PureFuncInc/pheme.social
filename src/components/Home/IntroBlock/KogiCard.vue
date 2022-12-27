@@ -3,7 +3,7 @@
     <img class="pic" :src="kogiPic" alt="" />
     <div class="card" :style="{ 'background-color': backgroundColor }">
       <div class="kogiName">{{ kogiName }}</div>
-      <div class="rank" />
+      <div :class="kogiRank" />
     </div>
   </div>
 </template>
@@ -25,6 +25,10 @@ export default defineComponent({
     kogiName: {
       type: String,
       default: '',
+    },
+    kogiRank: {
+      type: String,
+      default: 'rank1',
     },
   },
   setup() {
@@ -59,11 +63,32 @@ export default defineComponent({
       letter-spacing: 0.03em;
       color: #000000;
     }
-    .rank {
+    .rank1 {
       margin: 5px auto 0;
       width: 53%;
       height: 10%;
-      background: url("@/assets/home/introBlock/rank.svg") no-repeat center;
+      background: url("@/assets/home/introBlock/rank1.svg") no-repeat center;
+      background-size: 100% auto;
+    }
+    .rank2 {
+      margin: 5px auto 0;
+      width: 53%;
+      height: 10%;
+      background: url("@/assets/home/introBlock/rank2.svg") no-repeat center;
+      background-size: 100% auto;
+    }
+    .rank3 {
+      margin: 5px auto 0;
+      width: 53%;
+      height: 10%;
+      background: url("@/assets/home/introBlock/rank3.svg") no-repeat center;
+      background-size: 100% auto;
+    }
+    .rank5 {
+      margin: 5px auto 0;
+      width: 53%;
+      height: 10%;
+      background: url("@/assets/home/introBlock/rank5.svg") no-repeat center;
       background-size: 100% auto;
     }
   }

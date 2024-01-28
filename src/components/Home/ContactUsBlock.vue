@@ -3,7 +3,7 @@
     <div class="title">Stay in touch with Pheme</div>
     <ul class="link">
       <li class="discord">
-        <a href="https://discord.gg/2zByTWKpNS" target="_blank" rel="noreferrer noopener">
+        <a href="https://discord.pheme.social" target="_blank" rel="noreferrer noopener">
           <i />
           <div class="name">Discord</div>
         </a>

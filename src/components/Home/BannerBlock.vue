@@ -38,7 +38,7 @@
       <div class="ourSocials">
         <div class="name">OUR SOCIALS</div>
         <ul class="link">
-          <a href="https://discord.pheme.social" target="_blank" rel="noreferrer noopener">
+          <a href="https://discord.gg/2zByTWKpNS" target="_blank" rel="noreferrer noopener">
             <img src="@/assets/home/contactUsBlock/discord.svg" alt="discord" />
           </a>
           <a href="https://twitter.com/pheme_social" target="_blank" rel="noreferrer noopener">

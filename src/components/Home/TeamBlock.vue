@@ -7,7 +7,9 @@
         background-color="#5ABEBE"
         name="Wade"
         title="Cofounder & CEO"
-        description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
+        description="Wade is the CEO of Pheme. He is a strategic thinker and a decisive leader,
+        with a focus on building long-term value for our clients and stakeholders
+        through the development of innovative technical solutions."
       />
       <partner-card
         :pic="require('@/assets/home/teamBlock/Vincent.png')"
@@ -21,28 +23,36 @@
         background-color="#89C463"
         name="Nelson"
         title="Cofounder & Senior Developer"
-        description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
+        description="Nelson is a frontend and mobile developer.
+        He has a track record of delivering high-quality code and skilled at
+        bringing ideas to life through innovative and effective web and mobile solutions."
       />
       <partner-card
         :pic="require('@/assets/home/teamBlock/Daniel.png')"
         background-color="#BDBDBD"
         name="Daniel"
         title="Cofounder & Senior Developer"
-        description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
+        description="Daniel is a senior frontend developer have over 4 years of experience
+        in web development and specialize in building interactive and
+        user-friendly websites and applications."
       />
       <partner-card
         :pic="require('@/assets/home/teamBlock/April.png')"
         background-color="#FFA17D"
         name="April"
         title="UI / UX Director"
-        description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
+        description="April is a creative and strategic design leader
+        with a track record of delivering impactful design solutions for a variety of clients.
+         She leads a talented team of designers and work closely with clients to
+         bring their vision to life."
       />
       <partner-card
         :pic="require('@/assets/home/teamBlock/Yun.png')"
         background-color="#E47F80"
         name="Yun"
         title="Senior UI / UX Designer"
-        description="Vincent is a coder, speaker, mentor and leader has wide range skill set. He specializes in JVM Backend and DevOps. Reach him via https://jianminhuang.cc !"
+        description="Yun is a senior designer have a strong eye for aesthetics
+        and skilled at crafting compelling visual narratives that engage and inspire audiences."
       />
     </div>
   </div>

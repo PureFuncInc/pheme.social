@@ -1,5 +1,8 @@
 import {
-  createRouter, createWebHistory, RouteRecordRaw, RouterScrollBehavior,
+  createRouter,
+  createWebHashHistory,
+  RouteRecordRaw,
+  RouterScrollBehavior,
 } from 'vue-router';
 
 const scrollBehavior: RouterScrollBehavior = (to) => {
@@ -26,7 +29,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
   scrollBehavior,
 });

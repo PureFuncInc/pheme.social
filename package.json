@@ -6,7 +6,6 @@
     "serve": "vue-cli-service serve --mode development",
     "build": "vue-cli-service build --mode development",
     "build:prod": "vue-cli-service build --mode production",
-    "build:github": "vue-cli-service build --public-path /pheme.social/",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

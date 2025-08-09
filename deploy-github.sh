@@ -3,7 +3,7 @@
 rm -rf dist
 
 npm ci
-npm run build:github
+npm run build:prod
 
 rm -rf docs
 
